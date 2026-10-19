@@ -1,0 +1,50 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {JsonStore} from './store';
+
+test('JSON store preserves profile and assessment IDs and values across reloads',async t=>{
+  const base=path.join(process.cwd(),'work','test-data');fs.mkdirSync(base,{recursive:true});const directory=fs.mkdtempSync(path.join(base,'skillsetu-store-test-'));
+  const previous=process.env.SKILLSETU_STORE_FILE;
+  process.env.SKILLSETU_STORE_FILE=path.join(directory,'store.json');
+  t.after(()=>{if(previous===undefined)delete process.env.SKILLSETU_STORE_FILE;else process.env.SKILLSETU_STORE_FILE=previous;fs.rmSync(directory,{recursive:true,force:true})});
+  const store=new JsonStore({candidates:[]},{id:'test-content',version:'test'});
+  store.data.candidates.push({id:'candidate-stable',ownerUserId:'user-stable',phone:null,name:'Test Holder',language:'English',yearsExperience:8,occupationId:'domestic-electrician',experienceSource:'INFORMAL_WORK',experienceSummary:'Saved background',taskIds:[],description:'',consent:false,synthetic:false,createdAt:'2026-01-01T00:00:00Z',updatedAt:'2026-01-01T00:00:00Z'});
+  store.data.assessments.push({id:'assessment-stable',candidateId:'candidate-stable',assessorId:null,status:'REQUESTED',declarationId:null,contentSetId:'test-content',qualificationPackId:'qp-stable',scopeTaskIds:['task-stable'],skillId:'task-stable',contentVersion:'test',rubricVersion:'test-rubric',preferredMethod:'VIDEO',previousAssessmentId:null,scores:[],viva:[],draftResult:null,humanDecision:null,reviewerId:null,reviewReason:null,createdAt:'2026-01-01T00:00:00Z',updatedAt:'2026-01-01T00:00:00Z',synthetic:false});
+  store.data.notifications!.push({id:'notification-stable',userId:'user-stable',title:'Assessment saved',message:'Saved',createdAt:'2026-01-01T00:00:00Z'});
+  store.data.evidence.push({id:'evidence-stable',assessmentId:'assessment-stable',candidateId:'candidate-stable',criterionId:null,fileName:'demo-video.webm',mediaType:'video/webm',description:'ಕೌಶಲ್ಯ ತೋರಿಸುತ್ತಿದ್ದೇನೆ — showing a safe demonstration',size:12,sha256:'a'.repeat(64),storageKey:'evidence-stable.webm',uploadedBy:'user-stable',uploadedAt:'2026-01-01T00:00:00Z'});
+  store.data.reports.push({id:'report-stable-v2',assessmentId:'assessment-stable',candidateId:'candidate-stable',status:'RETURNED',version:2,createdAt:'2026-01-02T00:00:00Z',snapshot:{assessment:{id:'assessment-stable'},outcome:{status:'NOT_DETERMINED'}},assessorSignoff:{userId:'assessor-stable',accepted:true,version:2,signedAt:'2026-01-02T00:00:00Z'},reviewerSignoff:null,reviewComments:[{userId:'reviewer-stable',text:'Clarify one finding',version:2}]});
+  await store.save();
+  const reloaded=new JsonStore({candidates:[]},{id:'test-content',version:'test'});
+  assert.equal(reloaded.data.candidates.length,1);
+  assert.equal(reloaded.data.candidates[0].id,'candidate-stable');
+  assert.equal(reloaded.data.candidates[0].experienceSummary,'Saved background');
+  assert.equal(reloaded.data.assessments.length,1);
+  assert.equal(reloaded.data.assessments[0].id,'assessment-stable');
+  assert.equal(reloaded.data.assessments[0].preferredMethod,'VIDEO');
+  assert.equal(reloaded.data.assessments[0].qualificationPackId,'qp-stable');
+  assert.deepEqual(reloaded.data.assessments[0].scopeTaskIds,['task-stable']);
+  assert.equal(reloaded.data.assessments[0].skillId,'task-stable');
+  assert.equal(reloaded.data.evidence[0].description,'ಕೌಶಲ್ಯ ತೋರಿಸುತ್ತಿದ್ದೇನೆ — showing a safe demonstration');
+  assert.equal(reloaded.data.evidence[0].assessmentId,'assessment-stable');
+  assert.equal(reloaded.data.notifications?.[0].id,'notification-stable');
+  assert.equal(reloaded.data.reports[0].id,'report-stable-v2');
+  assert.equal(reloaded.data.reports[0].version,2);
+  assert.equal(reloaded.data.reports[0].snapshot.outcome.status,'NOT_DETERMINED');
+  assert.equal(reloaded.data.reports[0].assessorSignoff.version,2);
+  assert.equal(reloaded.data.reports[0].reviewComments[0].text,'Clarify one finding');
+});
+
+test('failed transaction leaves published memory and persisted JSON unchanged',async t=>{
+  const base=path.join(process.cwd(),'work','test-data');fs.mkdirSync(base,{recursive:true});const directory=fs.mkdtempSync(path.join(base,'skillsetu-atomic-test-'));
+  const previous=process.env.SKILLSETU_STORE_FILE;const file=path.join(directory,'store.json');process.env.SKILLSETU_STORE_FILE=file;
+  t.after(()=>{if(previous===undefined)delete process.env.SKILLSETU_STORE_FILE;else process.env.SKILLSETU_STORE_FILE=previous;fs.rmSync(directory,{recursive:true,force:true})});
+  const store=new JsonStore({candidates:[]},{id:'test-content',version:'test'});
+  await store.transact(draft=>draft.users.push({id:'u1',username:null,passwordHash:null,role:'WORKER',phone:'1111111111',displayName:'Before',candidateId:null,createdAt:'2026-01-01T00:00:00Z'}));
+  const original=fs.readFileSync(file,'utf8'),backup=`${file}.saved`;fs.renameSync(file,backup);fs.mkdirSync(file);
+  await assert.rejects(store.transact(draft=>{draft.users[0].displayName='Unpersisted'}));
+  assert.equal(store.data.users[0].displayName,'Before');
+  fs.rmSync(file,{recursive:true,force:true});fs.renameSync(backup,file);
+  assert.equal(fs.readFileSync(file,'utf8'),original);
+});

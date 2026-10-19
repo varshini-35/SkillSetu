@@ -1,0 +1,31 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+
+# Local runtime data and backups
+data/skillsetu-demo-store.json
+data/skillsetu-demo-store.backup.json
+data/assessor-experiments.json
+data/flow-test-store.json
+
+# Local assessment uploads and verified pre-change data backups
+data/evidence/
+work/backups/
+work/integration-test-store.json
+work/test-data/
+
+# Local credentials
+serviceAccountKey.json
+service-account*.json
+
+# Local end-to-end test data
+work/e2e-scratch/

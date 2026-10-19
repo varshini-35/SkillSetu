@@ -1,0 +1,13 @@
+{
+  "name": "SkillSetu — RPL Assessment",
+  "short_name": "SkillSetu",
+  "description": "Offline-capable assessor workspace for Recognition of Prior Learning assessments.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f8",
+  "theme_color": "#102b3f",
+  "icons": [
+    { "src": "/icons/skillsetu-app.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

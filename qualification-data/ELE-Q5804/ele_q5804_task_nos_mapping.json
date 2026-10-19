@@ -1,0 +1,87 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-TASK-NOS-MAPPING",
+  "version": "1.0-draft",
+  "qualification_code": "ELE/Q5804",
+  "mapping_status": "candidate_requires_qualified_review",
+  "official_mapping": false,
+  "mapping_rule": "These are proposed links between practical tasks and NOS components. They are not official task-to-PC mappings. A qualified assessor must review them against the source qualification file before use.",
+  "tasks": [
+    {
+      "task_id": "TASK-PLAN-INSTALLATION",
+      "task_name": "Interpret job instructions and plan electrical installation work",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-INSPECT-COMPONENTS",
+      "task_name": "Visually inspect electrical components and identify damage or incorrect connections",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-INSTALL-SUBSYSTEM",
+      "task_name": "Assemble or install an electrical and electronic subsystem according to job instructions",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-TEST-INSTALLATION",
+      "task_name": "Perform appropriate electrical installation tests before energizing",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-FAULT-FINDING",
+      "task_name": "Diagnose electrical installation faults and identify likely causes",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-REPAIR-FAULT",
+      "task_name": "Repair or replace faulty electrical installation components",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-WORKPLACE-SAFETY",
+      "task_name": "Identify hazards and demonstrate safe working practices",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-EMERGENCY-RESPONSE",
+      "task_name": "Identify emergency procedures and appropriate first-aid responses",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-CUSTOMER-COMMUNICATION",
+      "task_name": "Communicate work information and respond appropriately in workplace situations",
+      "candidate_nos_codes": ["DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "review_required": true
+    },
+    {
+      "task_id": "TASK-DIGITAL-EMPLOYABILITY",
+      "task_name": "Demonstrate relevant digital and employability skills",
+      "candidate_nos_codes": ["DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "review_required": true
+    }
+  ],
+  "validation": {
+    "source_qualification_code": "ELE/Q5804",
+    "source_pc_links_verified": false,
+    "assessor_review_completed": false,
+    "approved_for_production": false
+  }
+}

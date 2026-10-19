@@ -1,0 +1,2 @@
+id,nosId,taskId,question,expectedFocus,followUpsJson
+DEMO-VIVA-EXAMPLE,DEMO-NOS-EXAMPLE,example_task,Please describe how you approach this task.,Expected skill focus and safe work habits,"[""What would you do if you were unsure?""]"

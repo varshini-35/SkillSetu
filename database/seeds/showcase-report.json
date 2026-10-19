@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "SKILLSETU-SHOWCASE-RPL-01",
+  "version": 1,
+  "generatedAt": "2026-10-15T10:00:00.000Z",
+  "assessmentId": "SHOWCASE-ASSESSMENT-01",
+  "qualificationPackId": "DEMO-QP-DE-01",
+  "candidate": {
+    "id": "SHOWCASE-SKILL-HOLDER-01",
+    "name": "Arjun Kumar",
+    "yearsExperience": 6,
+    "experienceSource": "INFORMAL_WORK",
+    "experienceSummary": "Synthetic example: assisted with basic domestic electrical preparation, tool selection, and hazard reporting under supervision."
+  },
+  "declaration": {
+    "id": "SHOWCASE-DECLARATION-01",
+    "submittedAt": "2026-10-14T09:00:00.000Z",
+    "description": "Synthetic declaration for the SkillSetu product demonstration.",
+    "taskIds": ["tools_ppe", "continuity_testing", "hazard_identification"]
+  },
+  "assessment": {
+    "method": "IN_PERSON",
+    "startedAt": "2026-10-15T09:00:00.000Z",
+    "observations": "Synthetic observation: the candidate described a cautious preparation sequence and explained when to stop and escalate unsafe conditions."
+  },
+  "scores": [
+    { "criterionId": "DEMO-PC-01", "score": 3, "observation": "Synthetic observation: selected suitable protective equipment and explained its use." },
+    { "criterionId": "DEMO-PC-03", "score": 3, "observation": "Synthetic observation: described a safe continuity-check sequence and stated that the circuit must be confirmed safe." },
+    { "criterionId": "DEMO-PC-04", "score": 4, "observation": "Synthetic observation: identified the scenario hazard, stopped the described work, and explained escalation." }
+  ],
+  "vivaResponses": [
+    { "questionId": "DEMO-VIVA-01", "response": "Synthetic answer: I would use an appropriate tester, isolate the supply, and confirm the circuit is safe before checking continuity.", "judgement": "ANSWERED" },
+    { "questionId": "DEMO-VIVA-02", "response": "Synthetic answer: I would stop work, keep others clear, and inform the responsible person so the hazard can be addressed safely.", "judgement": "ANSWERED" }
+  ],
+  "evidence": [
+    { "id": "SHOWCASE-EVIDENCE-01", "criterionId": "DEMO-PC-01", "fileName": "Synthetic tool-selection reference", "description": "Text-only synthetic reference; no real photo, video, or uploaded file is included." },
+    { "id": "SHOWCASE-EVIDENCE-02", "criterionId": "DEMO-PC-04", "fileName": "Synthetic hazard-response reference", "description": "Text-only synthetic reference; not an actual evidence file or verified observation." }
+  ],
+  "outcome": {
+    "status": "ILLUSTRATIVE ONLY",
+    "explanation": "Synthetic rubric scores are shown only to demonstrate report layout. The catalogue has no verified pass threshold or approved decision rule; this sample makes no competence, pass/fail, certification, or government-credential claim."
+  },
+  "simulatedAssessor": { "id": "SIMULATED-ASSESSOR", "name": "Simulated Assessor", "signedAt": "2026-10-15T10:30:00.000Z" },
+  "simulatedReviewer": { "id": "SIMULATED-REVIEWER", "name": "Simulated Reviewer", "signedAt": "2026-10-15T11:00:00.000Z", "comment": "Synthetic showcase review only; not a real assessment approval." }
+}

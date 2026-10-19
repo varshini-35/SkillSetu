@@ -1,0 +1,158 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-PRACTICAL-ASSESSMENT",
+  "version": "1.0-draft",
+  "qualification_code": "ELE/Q5804",
+  "official_rubric": false,
+  "review_status": "draft_requires_qualified_assessor_review",
+  "scoring_scale": {
+    "0": "Not demonstrated",
+    "1": "Demonstrated only with substantial assistance",
+    "2": "Partially demonstrated; some assistance required",
+    "3": "Demonstrated satisfactorily with minimal assistance",
+    "4": "Demonstrated independently and satisfactorily"
+  },
+  "scoring_guidance": "Draft scale for prototype testing only. These labels are not an approved qualification scoring standard.",
+  "tasks": [
+    {
+      "task_id": "PRACT-ELE-001",
+      "task_name": "Interpret job instructions and plan work",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "criteria": [
+        "Identifies relevant job instructions and drawings",
+        "Identifies required materials and consumables",
+        "Identifies visible defects or missing components",
+        "Reports unclear instructions or shortages"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulated work order or de-energized training setup",
+        "Do not proceed when instructions are unclear"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-002",
+      "task_name": "Inspect electrical components",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "criteria": [
+        "Performs a visual inspection",
+        "Identifies visible damage or loose connections",
+        "Reports defective or inadequate components",
+        "Follows the provided inspection instructions"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use isolated, de-energized training components",
+        "Do not handle damaged energized equipment"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-003",
+      "task_name": "Demonstrate an installation or assembly sequence",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "criteria": [
+        "Follows the supplied job instructions",
+        "Selects the specified components and consumables",
+        "Follows the approved assembly sequence",
+        "Identifies and reports a simulated assembly error"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a training board or approved de-energized setup",
+        "Qualified assessor must approve the task setup"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-004",
+      "task_name": "Demonstrate pre-energization test preparation",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "criteria": [
+        "Identifies the required tests from the task instructions",
+        "Selects appropriate test equipment",
+        "Explains the applicable safe testing sequence",
+        "Records or reports the observed test results"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulator or approved de-energized training rig",
+        "Any physical testing must follow qualified supervision and approved procedures"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-005",
+      "task_name": "Diagnose a simulated electrical fault",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "criteria": [
+        "Gathers the information needed to investigate the fault",
+        "Identifies a plausible cause from the supplied evidence",
+        "Explains the appropriate corrective action",
+        "Documents or reports the findings"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a fault simulator or de-energized training equipment",
+        "Do not introduce real electrical hazards to create a fault"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-006",
+      "task_name": "Identify workplace hazards and safety controls",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "criteria": [
+        "Identifies hazards in the supplied work scenario",
+        "Selects relevant safety precautions",
+        "Identifies appropriate PPE and safety equipment",
+        "Explains when work must stop and the hazard must be reported"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a controlled training scenario",
+        "No real hazardous exposure is required"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-007",
+      "task_name": "Respond to a simulated workplace emergency",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "criteria": [
+        "Identifies the appropriate emergency procedure",
+        "Explains how to raise the alarm and obtain help",
+        "Identifies the need to avoid unsafe contact with electrical hazards",
+        "Explains the limits of their first-aid training"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use role-play or a simulated scenario",
+        "Do not use a real electrical incident or unsafe live demonstration"
+      ]
+    },
+    {
+      "task_id": "PRACT-ELE-008",
+      "task_name": "Demonstrate workplace communication and reporting",
+      "candidate_nos_codes": ["DGT/VSQ/N0102"],
+      "criteria": [
+        "Communicates task information clearly",
+        "Reports a simulated defect or shortage",
+        "Responds appropriately to a clarification request",
+        "Records relevant information in the supplied format"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulated workplace scenario",
+        "Provide reasonable communication accommodations where appropriate"
+      ]
+    }
+  ],
+  "calculation": {
+    "method": "sum_of_criterion_scores",
+    "maximum_per_criterion": 4,
+    "approved_pass_threshold": null,
+    "production_use_allowed": false
+  },
+  "validation": {
+    "source_pc_links_verified": false,
+    "assessor_review_completed": false,
+    "safety_review_completed": false,
+    "approved_for_production": false
+  }
+}

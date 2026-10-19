@@ -1,0 +1,172 @@
+{
+  "id": "skillsetu-consistency-demo",
+  "version": "1.0.0",
+  "label": "Synthetic scoring consistency dataset",
+  "classification": "SYNTHETIC_DEMO",
+  "occupationId": "domestic-electrician",
+  "contentSetId": "demo-domestic-electrician-v1",
+  "rubricVersion": "DEMO-0.1-rubric",
+  "scoreScale": {
+    "min": 0,
+    "max": 4,
+    "label": "Criterion performance score"
+  },
+  "cases": [
+    {
+      "id": "SYN-CONS-CASE-01",
+      "candidate": {
+        "id": "SYN-CAND-01",
+        "name": "Synthetic Case 01",
+        "fictional": true
+      },
+      "skill": "Identifying electrical tools and protective equipment",
+      "taskId": "tools_ppe",
+      "qualificationPackId": "DEMO-QP-DE-01",
+      "criterion": {
+        "id": "DEMO-PC-01",
+        "nosId": "DEMO-NOS-DE-01",
+        "mappingStatus": "PROVISIONAL"
+      },
+      "evidence": {
+        "practicalObservation": "In a staged scenario, the worker selects insulated tools and eye protection, but does not explain when damaged equipment must be removed from use.",
+        "vivaQuestion": "How do you choose and check tools and protective equipment before beginning this task?",
+        "vivaResponse": "I check that the tools are suitable and the gloves are in good condition. If something is damaged I tell the supervisor."
+      },
+      "manualInstructions": "Score only the recorded evidence using the shared 0–4 anchors. Do not infer unobserved performance.",
+      "anchors": [
+        {
+          "score": 0,
+          "label": "Does not identify a safe selection or proposes unsafe action."
+        },
+        {
+          "score": 1,
+          "label": "Needs substantial guidance to select appropriate items."
+        },
+        {
+          "score": 2,
+          "label": "Selects some appropriate items with guidance."
+        },
+        {
+          "score": 3,
+          "label": "Selects suitable items and explains their use."
+        },
+        {
+          "score": 4,
+          "label": "Selects suitable items independently and consistently."
+        }
+      ],
+      "validScoreRange": [
+        0,
+        4
+      ],
+      "qualityChecks": [
+        "Use evidence as written",
+        "Do not infer unseen actions"
+      ]
+    },
+    {
+      "id": "SYN-CONS-CASE-02",
+      "candidate": {
+        "id": "SYN-CAND-02",
+        "name": "Synthetic Case 02",
+        "fictional": true
+      },
+      "skill": "Describing continuity testing with suitable equipment",
+      "taskId": "continuity_testing",
+      "qualificationPackId": "DEMO-QP-DE-01",
+      "criterion": {
+        "id": "DEMO-PC-03",
+        "nosId": "DEMO-NOS-DE-02",
+        "mappingStatus": "PROVISIONAL"
+      },
+      "evidence": {
+        "practicalObservation": "The worker identifies a continuity tester and describes checking the leads. They do not establish isolation or prove the circuit is de-energized before the proposed test.",
+        "vivaQuestion": "What checks do you make before a continuity test?",
+        "vivaResponse": "I check the meter and leads, then test the circuit. I would ask someone senior if I was unsure."
+      },
+      "manualInstructions": "Score only the recorded evidence using the shared 0–4 anchors. Do not infer unobserved performance.",
+      "anchors": [
+        {
+          "score": 0,
+          "label": "Does not describe a safe process."
+        },
+        {
+          "score": 1,
+          "label": "Needs substantial guidance to describe the process."
+        },
+        {
+          "score": 2,
+          "label": "Describes some steps with prompts."
+        },
+        {
+          "score": 3,
+          "label": "Describes a suitable process and safety precautions."
+        },
+        {
+          "score": 4,
+          "label": "Explains a suitable process independently and consistently."
+        }
+      ],
+      "validScoreRange": [
+        0,
+        4
+      ],
+      "qualityChecks": [
+        "Use evidence as written",
+        "Do not infer unseen actions"
+      ]
+    },
+    {
+      "id": "SYN-CONS-CASE-03",
+      "candidate": {
+        "id": "SYN-CAND-03",
+        "name": "Synthetic Case 03",
+        "fictional": true
+      },
+      "skill": "Identifying unsafe conditions and hazards",
+      "taskId": "hazard_identification",
+      "qualificationPackId": "DEMO-QP-DE-01",
+      "criterion": {
+        "id": "DEMO-PC-04",
+        "nosId": "DEMO-NOS-DE-03",
+        "mappingStatus": "PROVISIONAL"
+      },
+      "evidence": {
+        "practicalObservation": "A damaged cable is present in the staged work area. The worker notices exposed insulation, stops work, and informs the supervisor, but leaves the cable accessible.",
+        "vivaQuestion": "What would you do after finding damaged insulation in the work area?",
+        "vivaResponse": "I would stop and report it. I should also keep people away, but I did not think to put a barrier until you asked."
+      },
+      "manualInstructions": "Score only the recorded evidence using the shared 0–4 anchors. Do not infer unobserved performance.",
+      "anchors": [
+        {
+          "score": 0,
+          "label": "Misses a key hazard or proposes unsafe action."
+        },
+        {
+          "score": 1,
+          "label": "Identifies a hazard only after substantial prompting."
+        },
+        {
+          "score": 2,
+          "label": "Identifies some hazards with prompts."
+        },
+        {
+          "score": 3,
+          "label": "Identifies relevant hazards and describes safe escalation."
+        },
+        {
+          "score": 4,
+          "label": "Consistently identifies hazards and explains safe escalation."
+        }
+      ],
+      "validScoreRange": [
+        0,
+        4
+      ],
+      "qualityChecks": [
+        "Use evidence as written",
+        "Do not infer unseen actions"
+      ]
+    }
+  ]
+}

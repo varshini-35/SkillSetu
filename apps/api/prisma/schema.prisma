@@ -1,0 +1,13 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+enum Role { WORKER ASSESSOR REVIEWER ADMIN }
+enum AssessmentStatus { DRAFT IN_PROGRESS AWAITING_REVIEW APPROVED RETURNED }
+model User { id String @id @default(cuid()) name String role Role assessments Assessment[] createdAt DateTime @default(now()) }
+model Candidate { id String @id @default(cuid()) name String phone String? language String @default("English") yearsExperience Float tasks String[] consent Boolean @default(false) assessments Assessment[] createdAt DateTime @default(now()) }
+model ContentSet { id String @id @default(cuid()) name String version String source String status String @default("DEMO") packs QualificationPack[] createdAt DateTime @default(now()) }
+model QualificationPack { id String @id @default(cuid()) contentSetId String title String demo Boolean @default(true) standards Standard[] contentSet ContentSet @relation(fields:[contentSetId], references:[id]) }
+model Standard { id String @id @default(cuid()) packId String code String title String criteria String[] demo Boolean @default(true) pack QualificationPack @relation(fields:[packId], references:[id]) }
+model Assessment { id String @id @default(cuid()) candidateId String assessorId String? status AssessmentStatus @default(DRAFT) scores Json @default("{}") draftResult String? humanDecision String? rubricVersion String @default("demo-1") candidate Candidate @relation(fields:[candidateId], references:[id]) assessor User? @relation(fields:[assessorId], references:[id]) createdAt DateTime @default(now()) updatedAt DateTime @updatedAt }
+model Evidence { id String @id @default(cuid()) assessmentId String kind String label String sha256 String? submittedAt DateTime @default(now()) reviewStatus String @default("PENDING") }
+model AuditEvent { id String @id @default(cuid()) actor String action String entityType String entityId String detail Json @default("{}") createdAt DateTime @default(now()) }
+model SignOff { id String @id @default(cuid()) assessmentId String reviewer String decision String reason String? createdAt DateTime @default(now()) }

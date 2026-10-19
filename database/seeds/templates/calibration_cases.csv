@@ -1,0 +1,2 @@
+id,title,criterionId,expectedScore,synthetic
+DEMO-CAL-EXAMPLE,Reference scenario,DEMO-PC-EXAMPLE,3,true

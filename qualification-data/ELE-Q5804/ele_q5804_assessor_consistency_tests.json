@@ -1,0 +1,143 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-ASSESSOR-TESTS",
+  "version": "1.0-draft",
+  "qualification_code": "ELE/Q5804",
+  "synthetic_test_data": true,
+  "execution_status": "not_executed",
+  "tests": [
+    {
+      "test_id": "AT-ELE-001",
+      "name": "Same evidence and same rubric",
+      "input": {
+        "evidence_id": "SYN-EVIDENCE-001",
+        "criterion_scores": [3, 3, 4]
+      },
+      "expected_result": "Repeated scoring using the same rubric should produce the same recorded scores.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-002",
+      "name": "Different scores require a review flag",
+      "input": {
+        "evidence_id": "SYN-EVIDENCE-002",
+        "assessor_a_scores": [3, 3, 3],
+        "assessor_b_scores": [2, 3, 3]
+      },
+      "expected_result": "The disagreement should be detectable and sent for review according to the configured policy.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-003",
+      "name": "Missing criterion score",
+      "input": {
+        "criterion_scores": [3, null, 4]
+      },
+      "expected_result": "The assessment must be marked incomplete; a missing score must not silently become zero or a pass.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-004",
+      "name": "Score below permitted range",
+      "input": {
+        "criterion_scores": [-1]
+      },
+      "expected_result": "Reject the score and display a validation error.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-005",
+      "name": "Score above permitted range",
+      "input": {
+        "criterion_scores": [5]
+      },
+      "expected_result": "Reject the score and display a validation error.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-006",
+      "name": "Unsafe action identified",
+      "input": {
+        "scenario": "Candidate proposes touching a person who may still be in contact with an electrical source.",
+        "safety_issue": true
+      },
+      "expected_result": "Flag the unsafe response for assessor review; do not let an aggregate score automatically override a safety concern.",
+      "safety_critical": true
+    },
+    {
+      "test_id": "AT-ELE-007",
+      "name": "Unverified task-to-PC mapping",
+      "input": {
+        "task_id": "PRACT-ELE-004",
+        "pc_ids": [],
+        "mapping_verified": false
+      },
+      "expected_result": "Keep the mapping provisional and prevent it from being presented as an approved official mapping.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-008",
+      "name": "Evidence is missing",
+      "input": {
+        "evidence_required": true,
+        "evidence_attached": false
+      },
+      "expected_result": "Flag the record as incomplete or requiring review according to the configured assessment policy.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-009",
+      "name": "Audit trail records a score change",
+      "input": {
+        "original_score": 2,
+        "updated_score": 3,
+        "reason_provided": true
+      },
+      "expected_result": "Record the original score, updated score, change time, responsible user and reason where supported by the application.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-010",
+      "name": "Offline assessment sync",
+      "input": {
+        "record_created_offline": true,
+        "connection_restored": true
+      },
+      "expected_result": "The application should sync the record without silently duplicating or overwriting assessment data.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-011",
+      "name": "Weighted score calculation",
+      "input": {
+        "scores": [3, 2, 4],
+        "weights": [1, 2, 1],
+        "maximum_score_per_criterion": 4
+      },
+      "expected_calculation": {
+        "weighted_score": 11,
+        "weighted_maximum": 16,
+        "percentage": 68.75
+      },
+      "expected_result": "Calculate the weighted score correctly. Do not infer a qualification pass from this percentage.",
+      "safety_critical": false
+    },
+    {
+      "test_id": "AT-ELE-012",
+      "name": "Draft assessment cannot claim certification",
+      "input": {
+        "mapping_verified": false,
+        "assessor_review_completed": false,
+        "production_approved": false
+      },
+      "expected_result": "Identify the assessment as draft or provisional and do not generate an approved certification outcome.",
+      "safety_critical": false
+    }
+  ],
+  "validation": {
+    "test_count": 12,
+    "tests_executed": false,
+    "results_verified": false,
+    "approved_for_production": false
+  }
+}

@@ -1,0 +1,2 @@
+id,nosId,description,safetyCritical,anchorsJson
+DEMO-PC-EXAMPLE,DEMO-NOS-EXAMPLE,Describes an observable task,true,"[{""score"":0,""description"":""Not demonstrated or unsafe""},{""score"":1,""description"":""Requires substantial assistance""},{""score"":2,""description"":""Partially demonstrated with guidance""},{""score"":3,""description"":""Demonstrated against this example criterion""},{""score"":4,""description"":""Demonstrated independently and consistently""}]"

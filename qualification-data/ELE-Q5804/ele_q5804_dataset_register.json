@@ -1,0 +1,68 @@
+
+{
+  "project": "SkillSetu",
+  "qualification_code": "ELE/Q5804",
+  "qualification_name": "Electrician",
+  "nsqf_level": 4,
+  "register_version": "1.0-draft",
+  "source_documents": [
+    {
+      "file": "QFile_Electrician.pdf",
+      "type": "user_provided_qualification_file",
+      "status": "extracted",
+      "current_validity_verified": false
+    }
+  ],
+  "datasets": [
+    {
+      "file": "07_ELE_Q5804_Official_Source/ele_q5804_nos_pc_dataset.json",
+      "purpose": "Qualification components and performance criteria",
+      "status": "draft_extracted_from_source",
+      "pc_links_verified": false
+    },
+    {
+      "file": "07_ELE_Q5804_Official_Source/ele_q5804_qualification_summary.json",
+      "purpose": "Qualification metadata and assessment notes",
+      "status": "draft",
+      "current_validity_verified": false
+    },
+    {
+      "file": "07_ELE_Q5804_Official_Source/ele_q5804_task_nos_mapping.json",
+      "purpose": "Proposed practical task-to-NOS mappings",
+      "status": "provisional",
+      "official_mapping": false
+    },
+    {
+      "file": "08_ELE_Q5804_Viva_Question_Bank/ele_q5804_viva_questions.json",
+      "purpose": "30 draft viva questions",
+      "status": "draft_requires_assessor_review",
+      "question_count": 30
+    },
+    {
+      "file": "09_ELE_Q5804_Practical_Assessment/ele_q5804_practical_assessment.json",
+      "purpose": "Practical assessment tasks and scoring rubric",
+      "status": "draft_requires_assessor_review",
+      "task_count": 8,
+      "approved_pass_threshold": null
+    },
+    {
+      "file": "10_ELE_Q5804_Assessor_Consistency_Tests/ele_q5804_assessor_consistency_tests.json",
+      "purpose": "Synthetic assessment logic test cases",
+      "status": "not_executed",
+      "test_count": 12
+    }
+  ],
+  "known_issues": [
+    "Current qualification validity has not been verified.",
+    "The source PDF contains conflicting statements about the 70 percent pass requirement.",
+    "Task-to-PC mappings require verification against the source qualification file.",
+    "Viva questions and practical assessment rubrics require qualified assessor review.",
+    "Assessor consistency tests have not been executed.",
+    "No production approval or certification decision is authorized by these draft files."
+  ],
+  "official_sih_dataset": {
+    "obtained": false,
+    "status": "not_verified_or_obtained"
+  },
+  "production_ready": false
+}

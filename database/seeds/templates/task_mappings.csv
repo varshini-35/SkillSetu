@@ -1,0 +1,2 @@
+id,taskId,taskLabel,nosId,criterionIdsJson
+DEMO-MAP-EXAMPLE,example_task,Example worker language,DEMO-NOS-EXAMPLE,"[""DEMO-PC-EXAMPLE""]"

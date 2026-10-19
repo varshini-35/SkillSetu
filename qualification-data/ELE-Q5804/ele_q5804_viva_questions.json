@@ -1,0 +1,259 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-VIVA",
+  "version": "1.0-draft",
+  "qualification_code": "ELE/Q5804",
+  "source_file": "QFile_Electrician.pdf",
+  "official_question_bank": false,
+  "review_status": "draft_requires_qualified_assessor_review",
+  "questions": [
+    {
+      "id": "VIVA-ELE-001",
+      "question": "What should you check before starting an electrical installation task?",
+      "suggested_answer": "Review the job instructions and approved drawings, collect the required materials, inspect components for visible damage, and identify relevant workplace hazards.",
+      "candidate_nos_codes": ["ELE/N5806", "ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-002",
+      "question": "Why must you follow approved drawings and job instructions?",
+      "suggested_answer": "They provide the specifications and instructions needed to carry out the assigned work correctly and consistently.",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-003",
+      "question": "What should you do if you find a damaged electrical component?",
+      "suggested_answer": "Do not use it without appropriate evaluation. Report the defect to the responsible person and follow the applicable workplace procedure.",
+      "candidate_nos_codes": ["ELE/N5806", "ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-004",
+      "question": "What checks are required before an electrical installation is energized?",
+      "suggested_answer": "The qualification lists insulation-resistance testing, earth-continuity testing, polarity checks and visual inspection before energizing.",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-005",
+      "question": "What types of checks may be performed on an energized installation?",
+      "suggested_answer": "The qualification lists functionality, voltage, phase rotation and protection-device checks. These must be performed only by an authorized, competent person using appropriate safety procedures.",
+      "candidate_nos_codes": ["ELE/N5805", "ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-006",
+      "question": "What is troubleshooting in an electrical installation?",
+      "suggested_answer": "It is the process of investigating a fault, identifying its likely cause and determining an appropriate corrective action.",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-007",
+      "question": "What should you do if you discover incorrect wiring or a bad connection?",
+      "suggested_answer": "Follow the applicable isolation and safety procedure, investigate the fault within your competence, and repair or report it according to workplace requirements.",
+      "candidate_nos_codes": ["ELE/N5805", "ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-008",
+      "question": "Name some hazards that may be present at an electrical worksite.",
+      "suggested_answer": "Possible hazards include electric shock, damaged equipment, exposed conductors, fire risks, unsafe tools and unsuitable working conditions.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-009",
+      "question": "Why is personal protective equipment important?",
+      "suggested_answer": "Appropriate PPE helps reduce exposure to workplace hazards when selected and used correctly alongside other required safety controls.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-010",
+      "question": "What should you do when you encounter an emergency at work?",
+      "suggested_answer": "Follow workplace emergency and evacuation procedures, alert the appropriate people, and provide only the first aid or assistance for which you are trained.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    
+    {
+      "id": "VIVA-ELE-011",
+      "question": "Why should measuring instruments be suitable for the test being performed?",
+      "suggested_answer": "The qualification requires appropriate measuring equipment to be used, tested and calibrated for relevant installation checks.",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-012",
+      "question": "What should you do if a test result indicates a possible electrical fault?",
+      "suggested_answer": "Follow the applicable safety procedure, investigate the result within your competence, and report or correct the fault according to workplace requirements.",
+      "candidate_nos_codes": ["ELE/N5805", "ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-013",
+      "question": "Why is earth continuity testing important?",
+      "suggested_answer": "It checks continuity of the protective earthing path as part of the required electrical installation tests.",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-014",
+      "question": "What is the purpose of an insulation-resistance test?",
+      "suggested_answer": "It assesses the insulation resistance of an electrical installation using a suitable tester and the applicable safe testing procedure.",
+      "candidate_nos_codes": ["ELE/N5805"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-015",
+      "question": "What should you do if the required materials or consumables are insufficient?",
+      "suggested_answer": "Report the shortage to the responsible person so the required materials can be arranged before the work proceeds.",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-016",
+      "question": "Why should electrical components be visually inspected before assembly?",
+      "suggested_answer": "Visual inspection can identify damage, loose connections or incorrect connections before assembly continues.",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-017",
+      "question": "What should you do if you identify an error in an earlier assembly step?",
+      "suggested_answer": "Identify and report the error to the responsible person and follow the approved procedure for correcting it.",
+      "candidate_nos_codes": ["ELE/N5806"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-018",
+      "question": "Why is housekeeping important in an electrical workplace?",
+      "suggested_answer": "Good housekeeping helps maintain an orderly work area and supports safer work practices.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-019",
+      "question": "What should you consider when handling heavy objects at work?",
+      "suggested_answer": "Follow safe handling practices and appropriate posture guidance to reduce the risk of injury.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-020",
+      "question": "Why must electrical and electronic waste be handled appropriately?",
+      "suggested_answer": "The qualification requires workers to identify and segregate waste and follow the appropriate disposal procedures for relevant waste categories.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    
+    {
+      "id": "VIVA-ELE-021",
+      "question": "Why should a worker follow workplace safety signs and instructions?",
+      "suggested_answer": "They communicate relevant hazards, precautions and required actions for the work area.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-022",
+      "question": "What should you do if you find a fire hazard at the workplace?",
+      "suggested_answer": "Follow workplace safety procedures, report the hazard and take only those actions that are safe and within your training.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-023",
+      "question": "Why is it important to know the location of first-aid equipment and emergency exits?",
+      "suggested_answer": "Knowing their locations helps workers respond more effectively during an emergency.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-024",
+      "question": "What should you do if a person receives an electric shock?",
+      "suggested_answer": "Do not touch the person while they may still be in contact with an electrical source. Raise the alarm, arrange emergency assistance and follow the appropriate trained rescue and first-aid procedures.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-025",
+      "question": "Why must the correct type of fire extinguisher be selected?",
+      "suggested_answer": "The qualification requires workers to identify fire types and select appropriate extinguishers. The choice must follow site procedures and applicable fire-safety guidance.",
+      "candidate_nos_codes": ["ELE/N1002"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-026",
+      "question": "Why should a worker communicate a problem to the supervisor?",
+      "suggested_answer": "Communication helps the responsible person understand the issue and coordinate an appropriate response to the work requirement.",
+      "candidate_nos_codes": ["ELE/N5806", "DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-027",
+      "question": "What should you do when workplace instructions or circumstances change?",
+      "suggested_answer": "Adapt appropriately, confirm unclear instructions with the responsible person and continue to follow applicable safety requirements.",
+      "candidate_nos_codes": ["ELE/N5805", "DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-028",
+      "question": "Why are digital skills useful in the workplace?",
+      "suggested_answer": "Digital skills can support workplace communication, access to information and completion of relevant work-related tasks.",
+      "candidate_nos_codes": ["DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-029",
+      "question": "Why should a worker keep learning and improving their skills?",
+      "suggested_answer": "Continued learning supports skill development, adaptation to changing work requirements and career progression.",
+      "candidate_nos_codes": ["DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "VIVA-ELE-030",
+      "question": "What should you do if you are asked to perform a task beyond your competence or authorization?",
+      "suggested_answer": "Explain the limitation to the responsible person and seek appropriate supervision, training or an authorized competent worker rather than proceeding unsafely.",
+      "candidate_nos_codes": ["ELE/N1002", "DGT/VSQ/N0102"],
+      "pc_ids": [],
+      "status": "draft"
+    }
+  ],
+  "validation": {
+    "question_count": 10,
+    "pc_links_verified": false,
+    "assessor_review_completed": false,
+    "approved_for_production": false
+  }
+}

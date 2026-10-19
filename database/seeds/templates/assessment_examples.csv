@@ -1,0 +1,2 @@
+id,candidateId,status,scoresJson,humanSignoff,synthetic
+DEMO-ASSESS-EXAMPLE,DEMO-CAND-EXAMPLE,AWAITING_REVIEW,"[{""criterionId"":""DEMO-PC-EXAMPLE"",""score"":3,""observation"":""Example observation""}]",PENDING,true

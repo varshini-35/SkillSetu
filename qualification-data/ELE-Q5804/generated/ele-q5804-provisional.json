@@ -1,0 +1,1406 @@
+{
+  "contentSet": {
+    "id": "ele-q5804-provisional-v1",
+    "occupationId": "electrician-ele-q5804",
+    "name": "Electrician — ELE/Q5804 provisional catalogue",
+    "version": "ELE-Q5804-DRAFT-1.0",
+    "trade": "Electrician (ELE/Q5804)",
+    "classification": "PROVISIONAL_IMPORTED",
+    "source": "User-provided qualification PDF and draft structured extraction. Current validity and task-to-PC mappings are unverified.",
+    "approvalReference": "24th NSQC meeting - NCVET - 17 November 2022",
+    "currentValidityVerified": false,
+    "productionApproved": false,
+    "assessmentReady": false,
+    "integrationWarnings": [
+      "Draft extraction; verify criteria against the source PDF.",
+      "Current qualification validity is unverified.",
+      "Task-to-PC mappings are empty and must not be inferred.",
+      "Task-to-NOS associations are provisional.",
+      "No official pass/fail threshold is configured.",
+      "Scoring anchors require review before live use."
+    ],
+    "sourceRegister": {
+      "project": "SkillSetu",
+      "qualification_code": "ELE/Q5804",
+      "qualification_name": "Electrician",
+      "nsqf_level": 4,
+      "register_version": "1.0-draft",
+      "source_documents": [
+        {
+          "file": "QFile_Electrician.pdf",
+          "type": "user_provided_qualification_file",
+          "status": "extracted",
+          "current_validity_verified": false
+        }
+      ],
+      "datasets": [
+        {
+          "file": "07_ELE_Q5804_Official_Source/ele_q5804_nos_pc_dataset.json",
+          "purpose": "Qualification components and performance criteria",
+          "status": "draft_extracted_from_source",
+          "pc_links_verified": false
+        },
+        {
+          "file": "07_ELE_Q5804_Official_Source/ele_q5804_qualification_summary.json",
+          "purpose": "Qualification metadata and assessment notes",
+          "status": "draft",
+          "current_validity_verified": false
+        },
+        {
+          "file": "07_ELE_Q5804_Official_Source/ele_q5804_task_nos_mapping.json",
+          "purpose": "Proposed practical task-to-NOS mappings",
+          "status": "provisional",
+          "official_mapping": false
+        },
+        {
+          "file": "08_ELE_Q5804_Viva_Question_Bank/ele_q5804_viva_questions.json",
+          "purpose": "30 draft viva questions",
+          "status": "draft_requires_assessor_review",
+          "question_count": 30
+        },
+        {
+          "file": "09_ELE_Q5804_Practical_Assessment/ele_q5804_practical_assessment.json",
+          "purpose": "Practical assessment tasks and scoring rubric",
+          "status": "draft_requires_assessor_review",
+          "task_count": 8,
+          "approved_pass_threshold": null
+        },
+        {
+          "file": "10_ELE_Q5804_Assessor_Consistency_Tests/ele_q5804_assessor_consistency_tests.json",
+          "purpose": "Synthetic assessment logic test cases",
+          "status": "not_executed",
+          "test_count": 12
+        }
+      ],
+      "known_issues": [
+        "Current qualification validity has not been verified.",
+        "The source PDF contains conflicting statements about the 70 percent pass requirement.",
+        "Task-to-PC mappings require verification against the source qualification file.",
+        "Viva questions and practical assessment rubrics require qualified assessor review.",
+        "Assessor consistency tests have not been executed.",
+        "No production approval or certification decision is authorized by these draft files."
+      ],
+      "official_sih_dataset": {
+        "obtained": false,
+        "status": "not_verified_or_obtained"
+      },
+      "production_ready": false
+    }
+  },
+  "qualificationPacks": [
+    {
+      "id": "ELE-Q5804-QP-PROVISIONAL",
+      "title": "Electrician — ELE/Q5804 (provisional)",
+      "trade": "Electrician",
+      "nsqfLevel": 4,
+      "description": "Provisional catalogue. Review qualification validity, criteria, task mappings and assessment rules before live use.",
+      "totalHours": 540,
+      "ncrfCredits": 18,
+      "reviewStatus": "DRAFT"
+    }
+  ],
+  "standards": [
+    {
+      "id": "ELE/N5806",
+      "qpId": "ELE-Q5804-QP-PROVISIONAL",
+      "title": "Planning, Design & Installation of electrical sub system",
+      "description": "Duration: 228 hours. Draft extraction. Verify against the source PDF.",
+      "sourceCode": "ELE/N5806",
+      "sourcePages": [
+        3,
+        7
+      ],
+      "durationHours": 228,
+      "assessmentMarks": {
+        "theory": 40,
+        "practical": 60
+      },
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE/N5805",
+      "qpId": "ELE-Q5804-QP-PROVISIONAL",
+      "title": "Testing, Commissioning, Maintenance, Fault Finding & Repair",
+      "description": "Duration: 208 hours. Draft extraction. Verify against the source PDF.",
+      "sourceCode": "ELE/N5805",
+      "sourcePages": [
+        3,
+        8,
+        9
+      ],
+      "durationHours": 208,
+      "assessmentMarks": {
+        "theory": 40,
+        "practical": 60
+      },
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT/VSQ/N0102",
+      "qpId": "ELE-Q5804-QP-PROVISIONAL",
+      "title": "Employability Skills",
+      "description": "Duration: 60 hours. Draft extraction. Verify against the source PDF.",
+      "sourceCode": "DGT/VSQ/N0102",
+      "sourcePages": [
+        3,
+        10,
+        11,
+        12
+      ],
+      "durationHours": 60,
+      "assessmentMarks": {
+        "theory": 20,
+        "practical": 30
+      },
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE/N1002",
+      "qpId": "ELE-Q5804-QP-PROVISIONAL",
+      "title": "Apply health and safety practices at the workplace",
+      "description": "Duration: 40 hours. Draft extraction. Verify against the source PDF.",
+      "sourceCode": "ELE/N1002",
+      "sourcePages": [
+        3,
+        13,
+        14,
+        15
+      ],
+      "durationHours": 40,
+      "assessmentMarks": {
+        "theory": 35,
+        "practical": 65
+      },
+      "reviewStatus": "DRAFT_EXTRACTION"
+    }
+  ],
+  "performanceCriteria": [
+    {
+      "id": "ELE-N5806-PC1",
+      "nosId": "ELE/N5806",
+      "description": "Communicate with the supervisor to understand the day's production requirements and plan work.",
+      "sourcePcId": "PC1",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC2",
+      "nosId": "ELE/N5806",
+      "description": "Apply approved drawings, job instructions or work manuals.",
+      "sourcePcId": "PC2",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC3",
+      "nosId": "ELE/N5806",
+      "description": "Collect required consumables, including wires and connectors.",
+      "sourcePcId": "PC3",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC4",
+      "nosId": "ELE/N5806",
+      "description": "Collect the work manual or job instruction from the manager.",
+      "sourcePcId": "PC4",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC5",
+      "nosId": "ELE/N5806",
+      "description": "Visually inspect boards and components for physical damage, loose connections or incorrect connections.",
+      "sourcePcId": "PC5",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC6",
+      "nosId": "ELE/N5806",
+      "description": "Follow the standard operating procedure to assemble the electrical subsystem.",
+      "sourcePcId": "PC6",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC7",
+      "nosId": "ELE/N5806",
+      "description": "Accurately interpret drawings, wiring and job specifications or instructions.",
+      "sourcePcId": "PC7",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC8",
+      "nosId": "ELE/N5806",
+      "description": "Identify and mark errors found in a previous assembly step.",
+      "sourcePcId": "PC8",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC9",
+      "nosId": "ELE/N5806",
+      "description": "Report defective components or an inadequate number of components.",
+      "sourcePcId": "PC9",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5806-PC10",
+      "nosId": "ELE/N5806",
+      "description": "Report insufficient consumables, such as wires, connectors, screws and nuts.",
+      "sourcePcId": "PC10",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC1",
+      "nosId": "ELE/N5805",
+      "description": "Test installations before energizing, including insulation resistance, earth continuity, polarity and visual inspection, to support personal and electrical safety.",
+      "sourcePcId": "PC1",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC2",
+      "nosId": "ELE/N5805",
+      "description": "Test energized installations for correct operation, including voltage, phase rotation and protection-device functioning.",
+      "sourcePcId": "PC2",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC3",
+      "nosId": "ELE/N5805",
+      "description": "Set up equipment and configure programmable relays, bus systems, timers and overload relays; load required applications and configure systems such as KNX, DALI, Modbus and IP- or IT-based systems.",
+      "sourcePcId": "PC3",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC4",
+      "nosId": "ELE/N5805",
+      "description": "Set the installation to full working condition and ensure the customer can operate it.",
+      "sourcePcId": "PC4",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC5",
+      "nosId": "ELE/N5805",
+      "description": "Adapt to changing circumstances.",
+      "sourcePcId": "PC5",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC6",
+      "nosId": "ELE/N5805",
+      "description": "Troubleshoot installation faults, including short or open circuits, incorrect polarity, insulation-resistance or earth-continuity faults, incorrect equipment settings and incorrect programmable-device settings.",
+      "sourcePcId": "PC6",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC7",
+      "nosId": "ELE/N5805",
+      "description": "Diagnose installation problems, including bad connections, incorrect wiring, high loop impedance and equipment failure.",
+      "sourcePcId": "PC7",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC8",
+      "nosId": "ELE/N5805",
+      "description": "Verify that an existing electrical installation continues to meet applicable current standards.",
+      "sourcePcId": "PC8",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC9",
+      "nosId": "ELE/N5805",
+      "description": "Use, test and calibrate measuring equipment, including insulation-resistance, continuity, installation, multimeter, clamp and network-cable testers.",
+      "sourcePcId": "PC9",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC10",
+      "nosId": "ELE/N5805",
+      "description": "Repair or replace faulty components in electrical installations.",
+      "sourcePcId": "PC10",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N5805-PC11",
+      "nosId": "ELE/N5805",
+      "description": "Rewire and repair faulty installations.",
+      "sourcePcId": "PC11",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC1",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify employability skills required for jobs across industries.",
+      "sourcePcId": "PC1",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC2",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify and explore learning and employability portals.",
+      "sourcePcId": "PC2",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC3",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Recognize constitutional values, civic rights and duties, citizenship, social responsibility, and personal ethics.",
+      "sourcePcId": "PC3",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC4",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Follow environmentally sustainable practices.",
+      "sourcePcId": "PC4",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC5",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Recognize the importance of 21st-century skills for employment.",
+      "sourcePcId": "PC5",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC6",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Practise self-awareness, behaviour skills, time management, critical and adaptive thinking, problem-solving, creativity, social and cultural awareness, emotional awareness and continuous learning.",
+      "sourcePcId": "PC6",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC7",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Use basic English in everyday conversations, in person and over the telephone.",
+      "sourcePcId": "PC7",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC8",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Read and understand routine information and instructions written in English.",
+      "sourcePcId": "PC8",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC9",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Write short messages, notes, letters and emails in English.",
+      "sourcePcId": "PC9",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC10",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Understand the difference between a job and a career.",
+      "sourcePcId": "PC10",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC11",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Prepare a career development plan with short- and long-term goals based on aptitude.",
+      "sourcePcId": "PC11",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC12",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Follow verbal and non-verbal communication etiquette and active-listening techniques.",
+      "sourcePcId": "PC12",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC13",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Work collaboratively with others in a team.",
+      "sourcePcId": "PC13",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC14",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Communicate and behave appropriately with people of all genders and persons with disabilities.",
+      "sourcePcId": "PC14",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC15",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Escalate workplace sexual-harassment issues according to the POSH Act.",
+      "sourcePcId": "PC15",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC16",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Select financial institutions, products and services according to requirements.",
+      "sourcePcId": "PC16",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC17",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Carry out offline and online financial transactions safely and securely.",
+      "sourcePcId": "PC17",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC18",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify salary components and calculate income, expenses, taxes and investments.",
+      "sourcePcId": "PC18",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC19",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify relevant rights and laws and use legal aid to address legal exploitation.",
+      "sourcePcId": "PC19",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC20",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Operate digital devices and perform basic internet operations securely.",
+      "sourcePcId": "PC20",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC21",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Use email, social media and virtual collaboration tools effectively.",
+      "sourcePcId": "PC21",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC22",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Use basic features of word-processing, spreadsheet and presentation software.",
+      "sourcePcId": "PC22",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC23",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify types of entrepreneurship and enterprises and research potential business opportunities.",
+      "sourcePcId": "PC23",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC24",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Develop a business plan and work model using the 4Ps: Product, Price, Place and Promotion.",
+      "sourcePcId": "PC24",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC25",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify funding sources and anticipate or mitigate financial and legal barriers to a business opportunity.",
+      "sourcePcId": "PC25",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC26",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify different types of customers.",
+      "sourcePcId": "PC26",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC27",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify and respond professionally to customer requests and needs.",
+      "sourcePcId": "PC27",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC28",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Follow appropriate hygiene and grooming standards.",
+      "sourcePcId": "PC28",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC29",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Create a professional curriculum vitae or résumé.",
+      "sourcePcId": "PC29",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC30",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Search for suitable jobs using reliable offline and online sources.",
+      "sourcePcId": "PC30",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC31",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Apply for identified job openings using suitable offline or online methods.",
+      "sourcePcId": "PC31",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC32",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Answer recruitment and selection questions politely, clearly and confidently.",
+      "sourcePcId": "PC32",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "DGT-VSQ-N0102-PC33",
+      "nosId": "DGT/VSQ/N0102",
+      "description": "Identify apprenticeship opportunities and register according to applicable guidelines and requirements.",
+      "sourcePcId": "PC33",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC1",
+      "nosId": "ELE/N1002",
+      "description": "Identify workplace hazards and possible causes of accidents.",
+      "sourcePcId": "PC1",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC2",
+      "nosId": "ELE/N1002",
+      "description": "Follow organizational safe-working practices and observe hazard signs in work areas.",
+      "sourcePcId": "PC2",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC3",
+      "nosId": "ELE/N1002",
+      "description": "Use appropriate personal protective equipment for the task, working conditions and hazard severity.",
+      "sourcePcId": "PC3",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC4",
+      "nosId": "ELE/N1002",
+      "description": "Follow safety procedures when handling tools, equipment and hazardous substances or working in hazardous environments.",
+      "sourcePcId": "PC4",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC5",
+      "nosId": "ELE/N1002",
+      "description": "Dispose of electronic waste using industry-approved techniques.",
+      "sourcePcId": "PC5",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC6",
+      "nosId": "ELE/N1002",
+      "description": "Prevent component damage by following electrostatic-discharge procedures.",
+      "sourcePcId": "PC6",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC7",
+      "nosId": "ELE/N1002",
+      "description": "Locate workplace health and safety equipment, including fire extinguishers, first-aid equipment, safety equipment and fire exits.",
+      "sourcePcId": "PC7",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC8",
+      "nosId": "ELE/N1002",
+      "description": "Maintain appropriate posture when handling heavy objects.",
+      "sourcePcId": "PC8",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC9",
+      "nosId": "ELE/N1002",
+      "description": "Apply good housekeeping practices.",
+      "sourcePcId": "PC9",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC10",
+      "nosId": "ELE/N1002",
+      "description": "Take preventive measures to avoid fire hazards.",
+      "sourcePcId": "PC10",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC11",
+      "nosId": "ELE/N1002",
+      "description": "Use appropriate fire extinguishers for different types of fires.",
+      "sourcePcId": "PC11",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC12",
+      "nosId": "ELE/N1002",
+      "description": "Demonstrate rescue and first-aid techniques in cases of fire or electrocution.",
+      "sourcePcId": "PC12",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC13",
+      "nosId": "ELE/N1002",
+      "description": "Provide appropriate first aid for bleeding, burns, choking, electric shock and poisoning.",
+      "sourcePcId": "PC13",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC14",
+      "nosId": "ELE/N1002",
+      "description": "Provide first aid in cases of heart attack or cardiac arrest due to electric shock.",
+      "sourcePcId": "PC14",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC15",
+      "nosId": "ELE/N1002",
+      "description": "Follow emergency procedures, including raising alarms, evacuation, taking shelter, reaching assembly points, roll call and safe return to work.",
+      "sourcePcId": "PC15",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC16",
+      "nosId": "ELE/N1002",
+      "description": "Use the correct method to move injured people during an emergency.",
+      "sourcePcId": "PC16",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC17",
+      "nosId": "ELE/N1002",
+      "description": "Identify recyclable, non-recyclable and hazardous waste.",
+      "sourcePcId": "PC17",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC18",
+      "nosId": "ELE/N1002",
+      "description": "Segregate waste into appropriate categories.",
+      "sourcePcId": "PC18",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC19",
+      "nosId": "ELE/N1002",
+      "description": "Ensure appropriate disposal of non-recyclable waste.",
+      "sourcePcId": "PC19",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC20",
+      "nosId": "ELE/N1002",
+      "description": "Deposit materials for disposal or reuse at identified locations, as described in the qualification file.",
+      "sourcePcId": "PC20",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    },
+    {
+      "id": "ELE-N1002-PC21",
+      "nosId": "ELE/N1002",
+      "description": "Follow specified processes for hazardous-waste disposal.",
+      "sourcePcId": "PC21",
+      "reviewStatus": "DRAFT_EXTRACTION"
+    }
+  ],
+  "taskMappings": [
+    {
+      "id": "TASK-PLAN-INSTALLATION",
+      "taskId": "TASK-PLAN-INSTALLATION",
+      "taskLabel": "Interpret job instructions and plan electrical installation work",
+      "nosId": "ELE/N5806",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-INSPECT-COMPONENTS",
+      "taskId": "TASK-INSPECT-COMPONENTS",
+      "taskLabel": "Visually inspect electrical components and identify damage or incorrect connections",
+      "nosId": "ELE/N5806",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-INSTALL-SUBSYSTEM",
+      "taskId": "TASK-INSTALL-SUBSYSTEM",
+      "taskLabel": "Assemble or install an electrical and electronic subsystem according to job instructions",
+      "nosId": "ELE/N5806",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-TEST-INSTALLATION",
+      "taskId": "TASK-TEST-INSTALLATION",
+      "taskLabel": "Perform appropriate electrical installation tests before energizing",
+      "nosId": "ELE/N5805",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-FAULT-FINDING",
+      "taskId": "TASK-FAULT-FINDING",
+      "taskLabel": "Diagnose electrical installation faults and identify likely causes",
+      "nosId": "ELE/N5805",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-REPAIR-FAULT",
+      "taskId": "TASK-REPAIR-FAULT",
+      "taskLabel": "Repair or replace faulty electrical installation components",
+      "nosId": "ELE/N5805",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-WORKPLACE-SAFETY",
+      "taskId": "TASK-WORKPLACE-SAFETY",
+      "taskLabel": "Identify hazards and demonstrate safe working practices",
+      "nosId": "ELE/N1002",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-EMERGENCY-RESPONSE",
+      "taskId": "TASK-EMERGENCY-RESPONSE",
+      "taskLabel": "Identify emergency procedures and appropriate first-aid responses",
+      "nosId": "ELE/N1002",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-CUSTOMER-COMMUNICATION",
+      "taskId": "TASK-CUSTOMER-COMMUNICATION",
+      "taskLabel": "Communicate work information and respond appropriately in workplace situations",
+      "nosId": "DGT/VSQ/N0102",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "DGT/VSQ/N0102"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    },
+    {
+      "id": "TASK-DIGITAL-EMPLOYABILITY",
+      "taskId": "TASK-DIGITAL-EMPLOYABILITY",
+      "taskLabel": "Demonstrate relevant digital and employability skills",
+      "nosId": "DGT/VSQ/N0102",
+      "criterionIds": [],
+      "candidateNosCodes": [
+        "DGT/VSQ/N0102"
+      ],
+      "reviewRequired": true,
+      "mappingStatus": "PROVISIONAL_UNVERIFIED"
+    }
+  ],
+  "vivaQuestions": [
+    {
+      "id": "VIVA-ELE-001",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you check before starting an electrical installation task?",
+      "expectedFocus": "Review the job instructions and approved drawings, collect the required materials, inspect components for visible damage, and identify relevant workplace hazards.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806",
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-002",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why must you follow approved drawings and job instructions?",
+      "expectedFocus": "They provide the specifications and instructions needed to carry out the assigned work correctly and consistently.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-003",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if you find a damaged electrical component?",
+      "expectedFocus": "Do not use it without appropriate evaluation. Report the defect to the responsible person and follow the applicable workplace procedure.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806",
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-004",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What checks are required before an electrical installation is energized?",
+      "expectedFocus": "The qualification lists insulation-resistance testing, earth-continuity testing, polarity checks and visual inspection before energizing.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-005",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What types of checks may be performed on an energized installation?",
+      "expectedFocus": "The qualification lists functionality, voltage, phase rotation and protection-device checks. These must be performed only by an authorized, competent person using appropriate safety procedures.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805",
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-006",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What is troubleshooting in an electrical installation?",
+      "expectedFocus": "It is the process of investigating a fault, identifying its likely cause and determining an appropriate corrective action.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-007",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if you discover incorrect wiring or a bad connection?",
+      "expectedFocus": "Follow the applicable isolation and safety procedure, investigate the fault within your competence, and repair or report it according to workplace requirements.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805",
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-008",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Name some hazards that may be present at an electrical worksite.",
+      "expectedFocus": "Possible hazards include electric shock, damaged equipment, exposed conductors, fire risks, unsafe tools and unsuitable working conditions.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-009",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why is personal protective equipment important?",
+      "expectedFocus": "Appropriate PPE helps reduce exposure to workplace hazards when selected and used correctly alongside other required safety controls.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-010",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do when you encounter an emergency at work?",
+      "expectedFocus": "Follow workplace emergency and evacuation procedures, alert the appropriate people, and provide only the first aid or assistance for which you are trained.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-011",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why should measuring instruments be suitable for the test being performed?",
+      "expectedFocus": "The qualification requires appropriate measuring equipment to be used, tested and calibrated for relevant installation checks.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-012",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if a test result indicates a possible electrical fault?",
+      "expectedFocus": "Follow the applicable safety procedure, investigate the result within your competence, and report or correct the fault according to workplace requirements.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805",
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-013",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why is earth continuity testing important?",
+      "expectedFocus": "It checks continuity of the protective earthing path as part of the required electrical installation tests.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-014",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What is the purpose of an insulation-resistance test?",
+      "expectedFocus": "It assesses the insulation resistance of an electrical installation using a suitable tester and the applicable safe testing procedure.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-015",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if the required materials or consumables are insufficient?",
+      "expectedFocus": "Report the shortage to the responsible person so the required materials can be arranged before the work proceeds.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-016",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why should electrical components be visually inspected before assembly?",
+      "expectedFocus": "Visual inspection can identify damage, loose connections or incorrect connections before assembly continues.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-017",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if you identify an error in an earlier assembly step?",
+      "expectedFocus": "Identify and report the error to the responsible person and follow the approved procedure for correcting it.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-018",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why is housekeeping important in an electrical workplace?",
+      "expectedFocus": "Good housekeeping helps maintain an orderly work area and supports safer work practices.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-019",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you consider when handling heavy objects at work?",
+      "expectedFocus": "Follow safe handling practices and appropriate posture guidance to reduce the risk of injury.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-020",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why must electrical and electronic waste be handled appropriately?",
+      "expectedFocus": "The qualification requires workers to identify and segregate waste and follow the appropriate disposal procedures for relevant waste categories.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-021",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why should a worker follow workplace safety signs and instructions?",
+      "expectedFocus": "They communicate relevant hazards, precautions and required actions for the work area.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-022",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if you find a fire hazard at the workplace?",
+      "expectedFocus": "Follow workplace safety procedures, report the hazard and take only those actions that are safe and within your training.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-023",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why is it important to know the location of first-aid equipment and emergency exits?",
+      "expectedFocus": "Knowing their locations helps workers respond more effectively during an emergency.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-024",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if a person receives an electric shock?",
+      "expectedFocus": "Do not touch the person while they may still be in contact with an electrical source. Raise the alarm, arrange emergency assistance and follow the appropriate trained rescue and first-aid procedures.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-025",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why must the correct type of fire extinguisher be selected?",
+      "expectedFocus": "The qualification requires workers to identify fire types and select appropriate extinguishers. The choice must follow site procedures and applicable fire-safety guidance.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-026",
+      "nosId": "ELE/N5806",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why should a worker communicate a problem to the supervisor?",
+      "expectedFocus": "Communication helps the responsible person understand the issue and coordinate an appropriate response to the work requirement.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5806",
+        "DGT/VSQ/N0102"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-027",
+      "nosId": "ELE/N5805",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do when workplace instructions or circumstances change?",
+      "expectedFocus": "Adapt appropriately, confirm unclear instructions with the responsible person and continue to follow applicable safety requirements.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N5805",
+        "DGT/VSQ/N0102"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-028",
+      "nosId": "DGT/VSQ/N0102",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why are digital skills useful in the workplace?",
+      "expectedFocus": "Digital skills can support workplace communication, access to information and completion of relevant work-related tasks.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "DGT/VSQ/N0102"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-029",
+      "nosId": "DGT/VSQ/N0102",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "Why should a worker keep learning and improving their skills?",
+      "expectedFocus": "Continued learning supports skill development, adaptation to changing work requirements and career progression.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "DGT/VSQ/N0102"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    },
+    {
+      "id": "VIVA-ELE-030",
+      "nosId": "ELE/N1002",
+      "taskId": "PROVISIONAL-UNMAPPED",
+      "question": "What should you do if you are asked to perform a task beyond your competence or authorization?",
+      "expectedFocus": "Explain the limitation to the responsible person and seek appropriate supervision, training or an authorized competent worker rather than proceeding unsafely.",
+      "followUps": [],
+      "candidateNosCodes": [
+        "ELE/N1002",
+        "DGT/VSQ/N0102"
+      ],
+      "reviewStatus": "DRAFT",
+      "reviewRequired": true
+    }
+  ],
+  "practicalAssessmentTasks": [
+    {
+      "task_id": "PRACT-ELE-001",
+      "task_name": "Interpret job instructions and plan work",
+      "candidate_nos_codes": [
+        "ELE/N5806"
+      ],
+      "criteria": [
+        "Identifies relevant job instructions and drawings",
+        "Identifies required materials and consumables",
+        "Identifies visible defects or missing components",
+        "Reports unclear instructions or shortages"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulated work order or de-energized training setup",
+        "Do not proceed when instructions are unclear"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-002",
+      "task_name": "Inspect electrical components",
+      "candidate_nos_codes": [
+        "ELE/N5806"
+      ],
+      "criteria": [
+        "Performs a visual inspection",
+        "Identifies visible damage or loose connections",
+        "Reports defective or inadequate components",
+        "Follows the provided inspection instructions"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use isolated, de-energized training components",
+        "Do not handle damaged energized equipment"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-003",
+      "task_name": "Demonstrate an installation or assembly sequence",
+      "candidate_nos_codes": [
+        "ELE/N5806"
+      ],
+      "criteria": [
+        "Follows the supplied job instructions",
+        "Selects the specified components and consumables",
+        "Follows the approved assembly sequence",
+        "Identifies and reports a simulated assembly error"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a training board or approved de-energized setup",
+        "Qualified assessor must approve the task setup"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-004",
+      "task_name": "Demonstrate pre-energization test preparation",
+      "candidate_nos_codes": [
+        "ELE/N5805"
+      ],
+      "criteria": [
+        "Identifies the required tests from the task instructions",
+        "Selects appropriate test equipment",
+        "Explains the applicable safe testing sequence",
+        "Records or reports the observed test results"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulator or approved de-energized training rig",
+        "Any physical testing must follow qualified supervision and approved procedures"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-005",
+      "task_name": "Diagnose a simulated electrical fault",
+      "candidate_nos_codes": [
+        "ELE/N5805"
+      ],
+      "criteria": [
+        "Gathers the information needed to investigate the fault",
+        "Identifies a plausible cause from the supplied evidence",
+        "Explains the appropriate corrective action",
+        "Documents or reports the findings"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a fault simulator or de-energized training equipment",
+        "Do not introduce real electrical hazards to create a fault"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-006",
+      "task_name": "Identify workplace hazards and safety controls",
+      "candidate_nos_codes": [
+        "ELE/N1002"
+      ],
+      "criteria": [
+        "Identifies hazards in the supplied work scenario",
+        "Selects relevant safety precautions",
+        "Identifies appropriate PPE and safety equipment",
+        "Explains when work must stop and the hazard must be reported"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a controlled training scenario",
+        "No real hazardous exposure is required"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-007",
+      "task_name": "Respond to a simulated workplace emergency",
+      "candidate_nos_codes": [
+        "ELE/N1002"
+      ],
+      "criteria": [
+        "Identifies the appropriate emergency procedure",
+        "Explains how to raise the alarm and obtain help",
+        "Identifies the need to avoid unsafe contact with electrical hazards",
+        "Explains the limits of their first-aid training"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use role-play or a simulated scenario",
+        "Do not use a real electrical incident or unsafe live demonstration"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    },
+    {
+      "task_id": "PRACT-ELE-008",
+      "task_name": "Demonstrate workplace communication and reporting",
+      "candidate_nos_codes": [
+        "DGT/VSQ/N0102"
+      ],
+      "criteria": [
+        "Communicates task information clearly",
+        "Reports a simulated defect or shortage",
+        "Responds appropriately to a clarification request",
+        "Records relevant information in the supplied format"
+      ],
+      "pc_ids": [],
+      "safety_controls": [
+        "Use a simulated workplace scenario",
+        "Provide reasonable communication accommodations where appropriate"
+      ],
+      "review_required": true,
+      "integration_status": "PRESERVED_AS_PROVISIONAL_METADATA"
+    }
+  ],
+  "assessmentMetadata": {
+    "assessmentMethods": [
+      "Theory",
+      "Viva voce",
+      "Practical"
+    ],
+    "approvedPassThreshold": null,
+    "passThresholdVerified": false,
+    "productionApproved": false,
+    "sourceFiles": [
+      "ele_q5804_dataset_register.json",
+      "ele_q5804_nos_pc_dataset.json",
+      "ele_q5804_qualification_summary.json",
+      "ele_q5804_task_nos_mapping.json",
+      "ele_q5804_viva_questions.json",
+      "ele_q5804_practical_assessment.json"
+    ]
+  }
+}

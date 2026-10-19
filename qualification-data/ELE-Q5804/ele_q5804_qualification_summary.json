@@ -1,0 +1,61 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-QUALIFICATION-SUMMARY",
+  "qualification": {
+    "qualification_name": "Electrician",
+    "qualification_code": "ELE/Q5804",
+    "nsqf_level": 4,
+    "awarding_body": "Electronics Sector Skills Council of India (ESSCI)",
+    "qualification_file_number": "2022/EHW/ESSC/06452",
+    "approval_reference": "24th NSQC meeting - NCVET - 17 November 2022",
+    "source_file": "QFile_Electrician.pdf",
+    "source_review_date": "2025-11-17",
+    "current_validity_verified": false
+  },
+  "qualification_components": [
+    {
+      "code": "ELE/N5806",
+      "name": "Planning, Design & Installation of Electrical and Electronic Sub System",
+      "hours": 228
+    },
+    {
+      "code": "ELE/N5805",
+      "name": "Testing, Commissioning, Maintenance, Fault finding & Repair",
+      "hours": 208
+    },
+    {
+      "code": "DGT/VSQ/N0102",
+      "name": "Employability Skills",
+      "hours": 60
+    },
+    {
+      "code": "ELE/N1002",
+      "name": "Apply health and safety practices at workplace",
+      "hours": 40
+    }
+  ],
+  "bridge_module_hours": 4,
+  "total_hours": 540,
+  "ncrf_credits": 18,
+  "assessment": {
+    "methods": [
+      "Theory",
+      "Viva voce",
+      "Practical"
+    ],
+    "rpl_process": [
+      "Pre-assessment",
+      "Skill gap identification",
+      "Bridge training",
+      "Final assessment"
+    ],
+    "pass_threshold_note": "The source PDF states 70% aggregate in one section and 70% in every NOS in another. This discrepancy requires confirmation.",
+    "approved_pass_threshold_for_skillsetu": null
+  },
+  "data_quality": {
+    "source_based": true,
+    "current_validity_checked": false,
+    "pass_threshold_discrepancy_resolved": false,
+    "production_approved": false
+  }
+}

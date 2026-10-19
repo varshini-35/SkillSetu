@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "contentSet": {
+    "id": "demo-domestic-electrician-v1",
+    "occupationId": "domestic-electrician",
+    "name": "Domestic Electrician demonstration catalogue",
+    "version": "DEMO-0.1",
+    "trade": "Domestic Electrician",
+    "classification": "SYNTHETIC_DEMO",
+    "source": "SkillSetu illustrative sample authored for software demonstration",
+    "effectiveDate": "2026-10-10",
+    "approvalReference": null
+  },
+  "qualificationPacks": [
+    {"id":"DEMO-QP-DE-01","title":"Domestic electrical work — demonstration pack","trade":"Domestic Electrician","nsqfLevel":null,"description":"Synthetic grouping for UI demonstration; not an official Qualification Pack."}
+  ],
+  "standards": [
+    {"id":"DEMO-NOS-DE-01","qpId":"DEMO-QP-DE-01","title":"Prepare for an electrical task","description":"Illustrative standard describing preparation and safe tool selection."},
+    {"id":"DEMO-NOS-DE-02","qpId":"DEMO-QP-DE-01","title":"Check basic circuit conditions","description":"Illustrative standard describing components and basic checks."},
+    {"id":"DEMO-NOS-DE-03","qpId":"DEMO-QP-DE-01","title":"Recognize and communicate hazards","description":"Illustrative standard describing hazard recognition and escalation."}
+  ],
+  "performanceCriteria": [
+    {"id":"DEMO-PC-01","nosId":"DEMO-NOS-DE-01","description":"Selects suitable tools and protective equipment for the described task.","safetyCritical":true,"anchors":[{"score":0,"description":"Does not identify a safe selection or proposes unsafe action."},{"score":1,"description":"Needs substantial guidance to select appropriate items."},{"score":2,"description":"Selects some appropriate items with guidance."},{"score":3,"description":"Selects suitable items and explains their use."},{"score":4,"description":"Selects suitable items independently and consistently."}]},
+    {"id":"DEMO-PC-02","nosId":"DEMO-NOS-DE-01","description":"Identifies basic components and describes their purpose.","safetyCritical":false,"anchors":[{"score":0,"description":"Does not identify the components."},{"score":1,"description":"Identifies only with substantial help."},{"score":2,"description":"Identifies some components with prompts."},{"score":3,"description":"Identifies common components and gives a reasonable purpose."},{"score":4,"description":"Identifies components and explains their purpose independently."}]},
+    {"id":"DEMO-PC-03","nosId":"DEMO-NOS-DE-02","description":"Explains a basic circuit connection and a safe continuity-check process.","safetyCritical":true,"anchors":[{"score":0,"description":"Does not describe a safe process."},{"score":1,"description":"Needs substantial guidance to describe the process."},{"score":2,"description":"Describes some steps with prompts."},{"score":3,"description":"Describes a suitable process and safety precautions."},{"score":4,"description":"Explains a suitable process independently and consistently."}]},
+    {"id":"DEMO-PC-04","nosId":"DEMO-NOS-DE-03","description":"Identifies unsafe conditions and describes safe escalation.","safetyCritical":true,"anchors":[{"score":0,"description":"Misses a key hazard or proposes unsafe action."},{"score":1,"description":"Identifies a hazard only after substantial prompting."},{"score":2,"description":"Identifies some hazards with prompts."},{"score":3,"description":"Identifies relevant hazards and describes safe escalation."},{"score":4,"description":"Consistently identifies hazards and explains safe escalation."}]}
+  ],
+  "taskMappings": [
+    {"id":"DEMO-TASK-TOOLS","taskId":"tools_ppe","taskLabel":"Identifying electrical tools and protective equipment","nosId":"DEMO-NOS-DE-01","criterionIds":["DEMO-PC-01"]},
+    {"id":"DEMO-TASK-COMPONENTS","taskId":"basic_components","taskLabel":"Identifying basic electrical components","nosId":"DEMO-NOS-DE-01","criterionIds":["DEMO-PC-02"]},
+    {"id":"DEMO-TASK-WIRING","taskId":"wiring_preparation","taskLabel":"Preparing and handling wiring","nosId":"DEMO-NOS-DE-01","criterionIds":["DEMO-PC-01"]},
+    {"id":"DEMO-TASK-CIRCUITS","taskId":"circuit_connections","taskLabel":"Understanding circuit connections","nosId":"DEMO-NOS-DE-02","criterionIds":["DEMO-PC-03"]},
+    {"id":"DEMO-TASK-MCB","taskId":"mcb_components","taskLabel":"Identifying MCB-related components","nosId":"DEMO-NOS-DE-01","criterionIds":["DEMO-PC-02"]},
+    {"id":"DEMO-TASK-CONTINUITY","taskId":"continuity_testing","taskLabel":"Describing continuity testing with suitable equipment","nosId":"DEMO-NOS-DE-02","criterionIds":["DEMO-PC-03"]},
+    {"id":"DEMO-TASK-HAZARDS","taskId":"hazard_identification","taskLabel":"Identifying unsafe conditions and hazards","nosId":"DEMO-NOS-DE-03","criterionIds":["DEMO-PC-04"]}
+  ],
+  "vivaQuestions": [
+    {"id":"DEMO-VIVA-01","nosId":"DEMO-NOS-DE-02","taskId":"continuity_testing","question":"Please describe how you prepare to check continuity and how you keep the work safe.","expectedFocus":"Tool choice, safe isolation concepts, checks before testing, and when to seek qualified support.","followUps":["What would you do if you could not confirm the circuit was safe?","How would you explain the result to the person responsible for the work?"]},
+    {"id":"DEMO-VIVA-02","nosId":"DEMO-NOS-DE-03","taskId":"hazard_identification","question":"Tell me about a time you noticed a possible electrical hazard. What did you do next?","expectedFocus":"Recognition, stopping unsafe activity, communicating the concern, and escalation.","followUps":["Who did you inform?","What would you do if the hazard remained?"]}
+  ],
+  "candidates": [
+    {"id":"DEMO-CAND-01","name":"Meera Nayak","language":"Kannada","yearsExperience":8,"taskIds":["wiring_preparation","hazard_identification","continuity_testing"],"synthetic":true},
+    {"id":"DEMO-CAND-02","name":"Ravi Kumar","language":"Hindi","yearsExperience":4,"taskIds":["basic_components","mcb_components"],"synthetic":true}
+  ],
+  "assessmentExamples": [
+    {"id":"DEMO-ASSESS-01","candidateId":"DEMO-CAND-01","status":"AWAITING_REVIEW","scores":[{"criterionId":"DEMO-PC-01","score":3,"observation":"Explained PPE selection in the scenario."},{"criterionId":"DEMO-PC-04","score":2,"observation":"Needed a prompt to describe escalation."}],"humanSignoff":"PENDING","synthetic":true}
+  ],
+  "calibrationCases": [
+    {"id":"DEMO-CAL-01","title":"Safe tool selection scenario","criterionId":"DEMO-PC-01","expectedScore":3,"synthetic":true},
+    {"id":"DEMO-CAL-02","title":"Hazard recognition scenario","criterionId":"DEMO-PC-04","expectedScore":2,"synthetic":true}
+  ],
+  "calibrationScores": [
+    {"id":"DEMO-CALSCORE-01","caseId":"DEMO-CAL-01","assessorId":"DEMO-ASSESSOR-01","score":3},
+    {"id":"DEMO-CALSCORE-02","caseId":"DEMO-CAL-02","assessorId":"DEMO-ASSESSOR-01","score":2}
+  ],
+  "bridgeRecommendations": [
+    {"id":"DEMO-BRIDGE-01","criterionId":"DEMO-PC-04","title":"Practice hazard recognition and escalation","rationale":"Targets the criterion where the demo example shows a need for further prompting.","resourceType":"ILLUSTRATIVE_PRACTICE","resourceReference":null}
+  ]
+}

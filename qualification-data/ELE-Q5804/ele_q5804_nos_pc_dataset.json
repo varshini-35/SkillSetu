@@ -1,0 +1,392 @@
+
+{
+  "dataset_id": "SKILLSETU-ELE-Q5804-NOS-PC",
+  "dataset_version": "1.0-draft",
+  "qualification": {
+    "title": "Electrician",
+    "qp_code": "ELE/Q5804",
+    "nsqf_level": 4,
+    "sector_skill_council": "Electronics Sector Skills Council of India (ESSCI)",
+    "qualification_file_number": "2022/EHW/ESSC/06452",
+    "approved_meeting": "24th NSQC Meeting - NCVET",
+    "approval_date": "2022-11-17",
+    "review_date_stated_in_pdf": "2025-11-17",
+    "total_duration_hours": 540,
+    "ncrf_credits_stated_in_pdf": 18,
+    "source_filename": "QFile_Electrician.pdf_ (1).pdf",
+    "source_pages": "1-15",
+    "source_status": "Extracted from user-provided qualification PDF; current validity not verified",
+    "extraction_status": "Draft structured extraction; descriptions may be summarized",
+    "official_data": true,
+    "current_validity_verified": false
+  },
+  "qualification_components": [
+    {
+      "component_type": "bridge_module",
+      "title": "Bridge Module",
+      "duration_hours": 4,
+      "nsqf_level": 4,
+      "source_page": 3,
+      "pc_list_available_in_extracted_pages": false
+    },
+    {
+      "component_type": "nos",
+      "nos_code": "ELE/N5806",
+      "title": "Planning, Design & Installation of electrical sub system",
+      "duration_hours": 228,
+      "source_pages": [3, 7],
+      "assessment_marks": {
+        "theory": 40,
+        "practical": 60
+      },
+      "performance_criteria": [
+        {
+          "pc_id": "PC1",
+          "description": "Communicate with the supervisor to understand the day's production requirements and plan work."
+        },
+        {
+          "pc_id": "PC2",
+          "description": "Apply approved drawings, job instructions or work manuals."
+        },
+        {
+          "pc_id": "PC3",
+          "description": "Collect required consumables, including wires and connectors."
+        },
+        {
+          "pc_id": "PC4",
+          "description": "Collect the work manual or job instruction from the manager."
+        },
+        {
+          "pc_id": "PC5",
+          "description": "Visually inspect boards and components for physical damage, loose connections or incorrect connections."
+        },
+        {
+          "pc_id": "PC6",
+          "description": "Follow the standard operating procedure to assemble the electrical subsystem."
+        },
+        {
+          "pc_id": "PC7",
+          "description": "Accurately interpret drawings, wiring and job specifications or instructions."
+        },
+        {
+          "pc_id": "PC8",
+          "description": "Identify and mark errors found in a previous assembly step."
+        },
+        {
+          "pc_id": "PC9",
+          "description": "Report defective components or an inadequate number of components."
+        },
+        {
+          "pc_id": "PC10",
+          "description": "Report insufficient consumables, such as wires, connectors, screws and nuts."
+        }
+      ]
+    },
+    {
+      "component_type": "nos",
+      "nos_code": "ELE/N5805",
+      "title": "Testing, Commissioning, Maintenance, Fault Finding & Repair",
+      "duration_hours": 208,
+      "source_pages": [3, 8, 9],
+      "assessment_marks": {
+        "theory": 40,
+        "practical": 60
+      },
+      "performance_criteria": [
+        {
+          "pc_id": "PC1",
+          "description": "Test installations before energizing, including insulation resistance, earth continuity, polarity and visual inspection, to support personal and electrical safety."
+        },
+        {
+          "pc_id": "PC2",
+          "description": "Test energized installations for correct operation, including voltage, phase rotation and protection-device functioning."
+        },
+        {
+          "pc_id": "PC3",
+          "description": "Set up equipment and configure programmable relays, bus systems, timers and overload relays; load required applications and configure systems such as KNX, DALI, Modbus and IP- or IT-based systems."
+        },
+        {
+          "pc_id": "PC4",
+          "description": "Set the installation to full working condition and ensure the customer can operate it."
+        },
+        {
+          "pc_id": "PC5",
+          "description": "Adapt to changing circumstances."
+        },
+        {
+          "pc_id": "PC6",
+          "description": "Troubleshoot installation faults, including short or open circuits, incorrect polarity, insulation-resistance or earth-continuity faults, incorrect equipment settings and incorrect programmable-device settings."
+        },
+        {
+          "pc_id": "PC7",
+          "description": "Diagnose installation problems, including bad connections, incorrect wiring, high loop impedance and equipment failure."
+        },
+        {
+          "pc_id": "PC8",
+          "description": "Verify that an existing electrical installation continues to meet applicable current standards."
+        },
+        {
+          "pc_id": "PC9",
+          "description": "Use, test and calibrate measuring equipment, including insulation-resistance, continuity, installation, multimeter, clamp and network-cable testers."
+        },
+        {
+          "pc_id": "PC10",
+          "description": "Repair or replace faulty components in electrical installations."
+        },
+        {
+          "pc_id": "PC11",
+          "description": "Rewire and repair faulty installations."
+        }
+      ]
+    },
+    {
+      "component_type": "nos",
+      "nos_code": "DGT/VSQ/N0102",
+      "title": "Employability Skills",
+      "duration_hours": 60,
+      "source_pages": [3, 10, 11, 12],
+      "assessment_marks": {
+        "theory": 20,
+        "practical": 30
+      },
+      "performance_criteria": [
+        {
+          "pc_id": "PC1",
+          "description": "Identify employability skills required for jobs across industries."
+        },
+        {
+          "pc_id": "PC2",
+          "description": "Identify and explore learning and employability portals."
+        },
+        {
+          "pc_id": "PC3",
+          "description": "Recognize constitutional values, civic rights and duties, citizenship, social responsibility, and personal ethics."
+        },
+        {
+          "pc_id": "PC4",
+          "description": "Follow environmentally sustainable practices."
+        },
+        {
+          "pc_id": "PC5",
+          "description": "Recognize the importance of 21st-century skills for employment."
+        },
+        {
+          "pc_id": "PC6",
+          "description": "Practise self-awareness, behaviour skills, time management, critical and adaptive thinking, problem-solving, creativity, social and cultural awareness, emotional awareness and continuous learning."
+        },
+        {
+          "pc_id": "PC7",
+          "description": "Use basic English in everyday conversations, in person and over the telephone."
+        },
+        {
+          "pc_id": "PC8",
+          "description": "Read and understand routine information and instructions written in English."
+        },
+        {
+          "pc_id": "PC9",
+          "description": "Write short messages, notes, letters and emails in English."
+        },
+        {
+          "pc_id": "PC10",
+          "description": "Understand the difference between a job and a career."
+        },
+        {
+          "pc_id": "PC11",
+          "description": "Prepare a career development plan with short- and long-term goals based on aptitude."
+        },
+        {
+          "pc_id": "PC12",
+          "description": "Follow verbal and non-verbal communication etiquette and active-listening techniques."
+        },
+        {
+          "pc_id": "PC13",
+          "description": "Work collaboratively with others in a team."
+        },
+        {
+          "pc_id": "PC14",
+          "description": "Communicate and behave appropriately with people of all genders and persons with disabilities."
+        },
+        {
+          "pc_id": "PC15",
+          "description": "Escalate workplace sexual-harassment issues according to the POSH Act."
+        },
+        {
+          "pc_id": "PC16",
+          "description": "Select financial institutions, products and services according to requirements."
+        },
+        {
+          "pc_id": "PC17",
+          "description": "Carry out offline and online financial transactions safely and securely."
+        },
+        {
+          "pc_id": "PC18",
+          "description": "Identify salary components and calculate income, expenses, taxes and investments."
+        },
+        {
+          "pc_id": "PC19",
+          "description": "Identify relevant rights and laws and use legal aid to address legal exploitation."
+        },
+        {
+          "pc_id": "PC20",
+          "description": "Operate digital devices and perform basic internet operations securely."
+        },
+        {
+          "pc_id": "PC21",
+          "description": "Use email, social media and virtual collaboration tools effectively."
+        },
+        {
+          "pc_id": "PC22",
+          "description": "Use basic features of word-processing, spreadsheet and presentation software."
+        },
+        {
+          "pc_id": "PC23",
+          "description": "Identify types of entrepreneurship and enterprises and research potential business opportunities."
+        },
+        {
+          "pc_id": "PC24",
+          "description": "Develop a business plan and work model using the 4Ps: Product, Price, Place and Promotion."
+        },
+        {
+          "pc_id": "PC25",
+          "description": "Identify funding sources and anticipate or mitigate financial and legal barriers to a business opportunity."
+        },
+        {
+          "pc_id": "PC26",
+          "description": "Identify different types of customers."
+        },
+        {
+          "pc_id": "PC27",
+          "description": "Identify and respond professionally to customer requests and needs."
+        },
+        {
+          "pc_id": "PC28",
+          "description": "Follow appropriate hygiene and grooming standards."
+        },
+        {
+          "pc_id": "PC29",
+          "description": "Create a professional curriculum vitae or résumé."
+        },
+        {
+          "pc_id": "PC30",
+          "description": "Search for suitable jobs using reliable offline and online sources."
+        },
+        {
+          "pc_id": "PC31",
+          "description": "Apply for identified job openings using suitable offline or online methods."
+        },
+        {
+          "pc_id": "PC32",
+          "description": "Answer recruitment and selection questions politely, clearly and confidently."
+        },
+        {
+          "pc_id": "PC33",
+          "description": "Identify apprenticeship opportunities and register according to applicable guidelines and requirements."
+        }
+      ]
+    },
+    {
+      "component_type": "nos",
+      "nos_code": "ELE/N1002",
+      "title": "Apply health and safety practices at the workplace",
+      "duration_hours": 40,
+      "source_pages": [3, 13, 14, 15],
+      "assessment_marks": {
+        "theory": 35,
+        "practical": 65
+      },
+      "performance_criteria": [
+        {
+          "pc_id": "PC1",
+          "description": "Identify workplace hazards and possible causes of accidents."
+        },
+        {
+          "pc_id": "PC2",
+          "description": "Follow organizational safe-working practices and observe hazard signs in work areas."
+        },
+        {
+          "pc_id": "PC3",
+          "description": "Use appropriate personal protective equipment for the task, working conditions and hazard severity."
+        },
+        {
+          "pc_id": "PC4",
+          "description": "Follow safety procedures when handling tools, equipment and hazardous substances or working in hazardous environments."
+        },
+        {
+          "pc_id": "PC5",
+          "description": "Dispose of electronic waste using industry-approved techniques."
+        },
+        {
+          "pc_id": "PC6",
+          "description": "Prevent component damage by following electrostatic-discharge procedures."
+        },
+        {
+          "pc_id": "PC7",
+          "description": "Locate workplace health and safety equipment, including fire extinguishers, first-aid equipment, safety equipment and fire exits."
+        },
+        {
+          "pc_id": "PC8",
+          "description": "Maintain appropriate posture when handling heavy objects."
+        },
+        {
+          "pc_id": "PC9",
+          "description": "Apply good housekeeping practices."
+        },
+        {
+          "pc_id": "PC10",
+          "description": "Take preventive measures to avoid fire hazards."
+        },
+        {
+          "pc_id": "PC11",
+          "description": "Use appropriate fire extinguishers for different types of fires."
+        },
+        {
+          "pc_id": "PC12",
+          "description": "Demonstrate rescue and first-aid techniques in cases of fire or electrocution."
+        },
+        {
+          "pc_id": "PC13",
+          "description": "Provide appropriate first aid for bleeding, burns, choking, electric shock and poisoning."
+        },
+        {
+          "pc_id": "PC14",
+          "description": "Provide first aid in cases of heart attack or cardiac arrest due to electric shock."
+        },
+        {
+          "pc_id": "PC15",
+          "description": "Follow emergency procedures, including raising alarms, evacuation, taking shelter, reaching assembly points, roll call and safe return to work."
+        },
+        {
+          "pc_id": "PC16",
+          "description": "Use the correct method to move injured people during an emergency."
+        },
+        {
+          "pc_id": "PC17",
+          "description": "Identify recyclable, non-recyclable and hazardous waste."
+        },
+        {
+          "pc_id": "PC18",
+          "description": "Segregate waste into appropriate categories."
+        },
+        {
+          "pc_id": "PC19",
+          "description": "Ensure appropriate disposal of non-recyclable waste."
+        },
+        {
+          "pc_id": "PC20",
+          "description": "Deposit materials for disposal or reuse at identified locations, as described in the qualification file."
+        },
+        {
+          "pc_id": "PC21",
+          "description": "Follow specified processes for hazardous-waste disposal."
+        }
+      ]
+    }
+  ],
+  "assessment_notes": {
+    "source_page_4": "The qualification file describes RPL assessment using pre-assessment, skill-gap identification, bridge training and final assessment. Assessment methods include theory, viva voce and practical assessment.",
+    "pass_threshold_note": "The PDF contains different pass-threshold statements in different sections. Do not configure an automated pass/fail threshold from this draft without reviewing the original document and resolving the discrepancy.",
+    "mapping_policy": "Task-to-PC mappings must be reviewed before being treated as official.",
+    "safety_policy": "Electrical safety criteria must not be overridden by an aggregate score.",
+    "data_quality": "PC descriptions in this dataset are concise structured summaries. Check the original PDF for exact wording before production use."
+  }
+}
