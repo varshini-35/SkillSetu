@@ -1,5 +1,7 @@
 import { FormEvent, useCallback, useEffect, useState } from 'react';
 
+const API_BASE = ((import.meta as any).env?.VITE_API_BASE_URL || '').replace(/\/$/, '');
+
 type DemoReport = {
   report: { id: string; version: number; status: string };
   snapshot: { skillHolder?: { name?: string; occupation?: string; declaredSkills?: Array<{ label?: string; id?: string }> }; qualification?: { title?: string }; assessment?: { method?: string } };
@@ -14,9 +16,25 @@ type DemoReport = {
 };
 
 async function request(path: string, init: RequestInit = {}) {
-  const response = await fetch(path, { credentials: 'include', ...init, headers: { 'Content-Type': 'application/json', ...(init.headers || {}) } });
+  const url = /^https?:\/\//i.test(path)
+    ? path
+    : `${API_BASE}${path.startsWith('/') ? path : `/${path}`}`;
+
+  const response = await fetch(url, {
+    credentials: 'include',
+    ...init,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(init.headers || {}),
+    },
+  });
+
   const data = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(data.error || `Request failed (${response.status})`);
+
+  if (!response.ok) {
+    throw new Error(data.error || `Request failed (${response.status})`);
+  }
+
   return data;
 }
 
@@ -114,7 +132,7 @@ export default function DemoPendingReview() {
         {error && <p className="error-msg" role="alert">{error}</p>}
         {message && <p className="demo-review-message" role="status">{message}</p>}
         <div className="demo-review-actions">
-          <a className="secondary" href="/api/admin/demo-review/download">Download demo PDF</a>
+          <a className="secondary" href={`${API_BASE}/api/admin/demo-review/download`}>Download demo PDF</a>
           {isPending ? <>
             <button className="primary" type="button" disabled={busy} onClick={() => void review('APPROVED')}>{busy ? 'Saving…' : 'Accept & Sign'}</button>
             {!returning ? <button className="secondary" type="button" disabled={busy} onClick={() => { setReturning(true); setMessage(''); }}>Return for Changes</button> : <form onSubmit={(event) => void review('RETURNED', event)}><label>Explain what needs correction or reassessment<textarea required minLength={3} maxLength={2000} value={reason} onChange={(event) => setReason(event.target.value)} /></label><button className="secondary" type="submit" disabled={busy || reason.trim().length < 3}>{busy ? 'Saving…' : 'Return for Changes'}</button><button className="secondary" type="button" onClick={() => { setReturning(false); setReason(''); }}>Cancel</button></form>}
