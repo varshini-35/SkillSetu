@@ -80,7 +80,25 @@ function requireRole(...roles:Role[]){return (req:Request,res:Response,next:Next
 function limited(key:string,max=5){const now=Date.now(),v=limits.get(key);if(v&&v.until>now&&v.count>=max)return false;if(!v||v.until<=now)limits.set(key,{count:1,until:now+15*60_000});else v.count++;return true}
 function pwHash(p:string){const salt=randomBytes(16).toString('hex');return `${salt}:${scryptSync(p,salt,64).toString('hex')}`}
 function verifyPw(p:string,stored:string|null){if(!stored)return false;const [salt,hex]=stored.split(':');const a=scryptSync(p,salt,64),b=Buffer.from(hex,'hex');return a.length===b.length&&timingSafeEqual(a,b)}
-function setSession(res:Response,u:User){const token=randomBytes(32).toString('hex');sessionMap.set(token,{userId:u.id,expires:Date.now()+8*60*60_000});res.setHeader('Set-Cookie',`${cookieName}=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=28800${process.env.NODE_ENV==='production'?'; Secure':''}`)}
+
+function setSession(res: Response, u: User) {
+  const token = randomBytes(32).toString('hex');
+
+  sessionMap.set(token, {
+    userId: u.id,
+    expires: Date.now() + 8 * 60 * 60_000,
+  });
+
+  const sameSite =
+    process.env.NODE_ENV === 'production'
+      ? 'SameSite=None; Secure'
+      : 'SameSite=Lax';
+
+  res.setHeader(
+    'Set-Cookie',
+    `${cookieName}=${token}; HttpOnly; ${sameSite}; Path=/; Max-Age=28800`
+  );
+}
 function audit(u:User|null,action:string,entity:string,id:string,detail:Record<string,unknown>={}){store.data.audit.unshift({id:randomBytes(8).toString('hex'),userId:u?.id||null,actor:u?.displayName||'System',role:u?.role||'SYSTEM',action,entity,entityId:id,detail,at:new Date().toISOString()})}
 function notify(userId:string,title:string,message:string,entityId?:string){store.data.notifications ||= [];store.data.notifications.unshift({id:makeId('NTF'),userId,title,message,entityId:entityId||null,createdAt:new Date().toISOString()})}
 function candidateUserId(candidate:Candidate|undefined){return candidate?.ownerUserId||store.data.users.find(x=>x.candidateId===candidate?.id)?.id}
