@@ -87,6 +87,8 @@ Mappings are deterministic and suggestions require assessor review. Only synthet
 
 Set `SKILLSETU_ALLOWED_ORIGINS` to a comma-separated list of exact HTTPS origins for a hosted frontend. The API retains the two localhost development origins by default and rejects other origins. Do not set a wildcard. Sessions, OTPs, and rate-limit counters remain process-memory state; the JSON file and local evidence directory are intended for a single-process local demo only.
 
+For the current split Render deployment, set the API service's `SKILLSETU_ALLOWED_ORIGINS` to `https://skillsetu-frontend-zlfx.onrender.com` and set the frontend service's build-time `VITE_API_BASE_URL` to `https://skillsetu-api-a548.onrender.com`. Redeploy the API after changing its environment and rebuild/redeploy the frontend after changing `VITE_API_BASE_URL`. Production session cookies use `SameSite=None; Secure` so credentialed requests can restore login across the separate frontend/API hosts; local development retains `SameSite=Lax`.
+
 Run these checks from the repository root:
 
 ```powershell
