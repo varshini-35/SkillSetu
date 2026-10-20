@@ -5,7 +5,7 @@ An RPL workflow prototype for multiple occupations, beginning with Domestic Elec
 ## Requirements and local run
 
 - Node.js 20+ and npm 10+
-- PostgreSQL is not required for this local demo; it is not currently connected to the API.
+- The local demo explicitly uses the JSON store. PostgreSQL/Neon mode is available when configured; see the persistence guide below.
 
 ```powershell
 cd work/skillsetu
@@ -51,9 +51,9 @@ Domestic Electrician is the only occupation currently bundled and enabled. The A
 
 ## Storage and deployment limitations
 
-`DATABASE_URL` and the Prisma schema are not used by this API yet. The API currently writes a local JSON file and keeps sessions, OTPs, and rate-limit counters in process memory. That is suitable only for a single-process local demo: sessions end on restart, concurrent instances are unsafe, and the JSON file lacks database transactions and operational backup controls. Before deployment, connect PostgreSQL, migrate authentication/session storage, configure a real SMS provider, HTTPS, secrets management, monitoring, retention, and authorized content. Do not represent the simulated OTP as phone verification.
+The API supports PostgreSQL persistence, and the initial migration and JSON import to the team's Neon database have been completed. Local development continues to use the JSON store by default; select PostgreSQL explicitly with `SKILLSETU_STORAGE=postgres` and `DATABASE_URL`. Sessions, OTPs, and rate-limit counters remain in process memory, and the simulated OTP does not verify phone ownership. Before relying on the service for production use, configure an appropriate real OTP provider, HTTPS, secrets management, monitoring, retention, and authorized content. Do not represent the simulated OTP as phone verification.
 
-Run `npm run build` for API type checking, frontend type checking, and the Vite production build. API health reports the active file store and explicitly states that PostgreSQL is not connected.
+Run `npm run build` for API type checking, frontend type checking, and the Vite production build. API health reports the active storage backend and database connection status.
 
 ## Domain data
 
@@ -100,3 +100,6 @@ npm run build
 ```
 
 The translation check verifies keyed dictionary parity only; it does not detect English literals left in dashboard components. Most dashboard copy and imported technical content still need reviewed Kannada/Hindi translations.
+# PostgreSQL / Neon
+
+The API now supports the explicit PostgreSQL storage mode and keeps JSON persistence for local development and isolated tests. Read [docs/POSTGRESQL.md](docs/POSTGRESQL.md) for the state schema, migration command, local verification steps, optional guarded JSON import, and production limitations. Do not import any local store until its source has been verified.

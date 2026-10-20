@@ -4,17 +4,18 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "concurrently -k -n api,web -c blue,green \"npm run dev:api\" \"npm run dev:web\"",
-    "dev:api": "tsx watch apps/api/src/server.ts",
+    "dev:api": "tsx watch apps/api/src/dev-server.ts",
     "dev:web": "vite apps/web --config apps/web/vite.config.ts --host 0.0.0.0",
     "build": "tsc -p apps/api/tsconfig.json && tsc -p apps/web/tsconfig.json --noEmit && vite build apps/web --config apps/web/vite.config.ts",
     "content:validate:demo": "node scripts/import-content.mjs database/seeds/domestic-electrician-demo.json",
-    "test": "tsx --test --test-concurrency=1 apps/api/src/metrics.test.ts apps/api/src/store.test.ts apps/api/src/assessment-scope.test.ts apps/api/src/assessment-authorization.test.ts apps/api/src/assessment-workflow.integration.test.ts apps/api/src/experiment-store.test.ts apps/api/src/experiment-workflow.integration.test.ts apps/api/src/mapping-engine.test.ts apps/api/src/assessment-report.test.ts apps/api/src/evidence-validation.test.ts apps/api/src/evidence-workflow.test.ts apps/api/src/notification-access.test.ts apps/web/src/evidence-client.test.ts apps/web/src/assessment-history.test.ts apps/web/src/offline-assessment.test.ts apps/web/src/auth-session.test.ts apps/web/src/worker-profile.test.ts",
+    "test": "tsx --test --test-concurrency=1 apps/api/src/metrics.test.ts apps/api/src/store.test.ts apps/api/src/postgres-store.test.ts apps/api/src/assessment-scope.test.ts apps/api/src/assessment-authorization.test.ts apps/api/src/assessment-workflow.integration.test.ts apps/api/src/experiment-store.test.ts apps/api/src/experiment-workflow.integration.test.ts apps/api/src/mapping-engine.test.ts apps/api/src/assessment-report.test.ts apps/api/src/evidence-validation.test.ts apps/api/src/evidence-workflow.test.ts apps/api/src/notification-access.test.ts apps/web/src/evidence-client.test.ts apps/web/src/assessment-history.test.ts apps/web/src/offline-assessment.test.ts apps/web/src/auth-session.test.ts apps/web/src/worker-profile.test.ts",
     "i18n": "npm run i18n:check",
     "i18n:check": "tsx scripts/check-i18n.ts",
     "content:validate:templates": "node scripts/import-content.mjs database/seeds/templates",
     "content:import": "node scripts/import-content.mjs",
     "db:generate": "prisma generate --schema apps/api/prisma/schema.prisma",
-    "db:migrate": "prisma migrate dev --schema apps/api/prisma/schema.prisma",
+    "db:migrate": "tsx scripts/migrate-postgres.ts",
+    "db:import-json": "tsx scripts/import-json-to-postgres.ts",
     "db:seed": "tsx apps/api/prisma/seed.ts"
   },
   "dependencies": {

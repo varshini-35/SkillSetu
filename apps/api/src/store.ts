@@ -8,17 +8,38 @@ export type Candidate = {id:string;ownerUserId:string|null;phone:string|null;nam
 export type Assessment = {id:string;candidateId:string;assessorId:string|null;status:'REQUESTED'|'IN_PROGRESS'|'AWAITING_REVIEW'|'APPROVED'|'RETURNED'|'CANCELLED';declarationId:string|null;contentSetId:string;qualificationPackId?:string|null;scopeTaskIds?:string[];skillId?:string;contentVersion:string;rubricVersion:string;mappingSnapshot?:any;preferredMethod?:'IN_PERSON'|'VIDEO'|'PORTFOLIO';modeDetails?:{location?:string;availability?:string;connectivity?:string;sessionNotes?:string};previousAssessmentId?:string|null;revisions?:any[];scores:any[];viva:any[];draftResult:any|null;humanDecision:string|null;reviewerId:string|null;reviewReason:string|null;createdAt:string;updatedAt:string;synthetic:boolean};
 export type StoreData = {users:User[];candidates:Candidate[];declarations:any[];assessments:Assessment[];evidence:any[];reports:any[];audit:any[];notifications?:any[];occupationAvailability?:Record<string,boolean>;calibrationRatings?:any[];mappingReviews?:any[];offlineSyncReceipts?:any[]};
 
-export class JsonStore {
+export interface PersistenceStore {
+  readonly backend:'json'|'postgres';
+  readonly file:string|null;
+  readonly evidenceDirectory:string;
+  data:StoreData;
+  save():Promise<void>;
+  transact<T>(mutate:(draft:StoreData)=>T|Promise<T>):Promise<T>;
+  refresh?():Promise<void>;
+  close?():Promise<void>;
+}
+
+export function emptyStoreData():StoreData{return {users:[],candidates:[],declarations:[],assessments:[],evidence:[],reports:[],audit:[],notifications:[],occupationAvailability:{},calibrationRatings:[],mappingReviews:[],offlineSyncReceipts:[]}}
+export function normalizeStoreData(data:StoreData):StoreData{
+  data.users ||= [];data.candidates ||= [];data.declarations ||= [];data.assessments ||= [];data.evidence ||= [];data.reports ||= [];data.audit ||= [];
+  data.occupationAvailability ||= {};data.calibrationRatings ||= [];data.notifications ||= [];data.mappingReviews ||= [];data.offlineSyncReceipts ||= [];
+  return data;
+}
+
+export class JsonStore implements PersistenceStore {
+  readonly backend='json' as const;
   readonly file: string;
+  readonly evidenceDirectory:string;
   data: StoreData;
   private writeChain: Promise<void> = Promise.resolve();
   private transactionChain: Promise<void> = Promise.resolve();
   private committedData!: StoreData;
   constructor(seed:any, contentSet:any) {
     this.file=path.resolve(process.cwd(),process.env.SKILLSETU_STORE_FILE||'data/skillsetu-demo-store.json');
+    this.evidenceDirectory=path.resolve(process.env.SKILLSETU_EVIDENCE_DIR||path.join(path.dirname(this.file),'evidence'));
     fs.mkdirSync(path.dirname(this.file),{recursive:true});
     if (fs.existsSync(this.file)) {
-      this.data=JSON.parse(fs.readFileSync(this.file,'utf8'));
+      this.data=normalizeStoreData(JSON.parse(fs.readFileSync(this.file,'utf8')));
       // Additive defaults keep existing JSON stores and profile/assessment records intact.
       this.data.users ||= []; this.data.candidates ||= []; this.data.declarations ||= [];
       this.data.assessments ||= []; this.data.evidence ||= []; this.data.reports ||= []; this.data.audit ||= [];
@@ -28,7 +49,7 @@ export class JsonStore {
     else {
       const now=new Date().toISOString();
       const candidates=(seed.candidates||[]).map((c:any,i:number)=>({id:`SS-${2048-i}`,ownerUserId:null,phone:null,name:c.name,language:c.language||'English',yearsExperience:c.yearsExperience||0,taskIds:c.taskIds||[],description:'',consent:true,synthetic:true,createdAt:now,updatedAt:now}));
-      this.data={users:[],candidates,declarations:[],assessments:[],evidence:[],reports:[],audit:[],notifications:[],occupationAvailability:{},calibrationRatings:[],mappingReviews:[],offlineSyncReceipts:[]};
+      this.data={...emptyStoreData(),candidates};
       for(const ex of seed.assessmentExamples||[]) {
         const source=(seed.candidates||[]).find((c:any)=>c.id===ex.candidateId);
         const index=(seed.candidates||[]).indexOf(source);
